@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */; };
+		CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2C1D21919D0040A32B /* HeartLink.xcdatamodeld */; };
+		CEA1DF301D21919D0040A32B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2F1D21919D0040A32B /* ViewController.swift */; };
+		CEA1DF331D21919D0040A32B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF311D21919D0040A32B /* Main.storyboard */; };
+		CEA1DF351D21919D0040A32B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF341D21919D0040A32B /* Images.xcassets */; };
+		CEA1DF381D21919D0040A32B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF361D21919D0040A32B /* LaunchScreen.xib */; };
+		CEA1DF441D21919D0040A32B /* HeartLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF431D21919D0040A32B /* HeartLinkTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEA1DF3E1D21919D0040A32B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA1DF1D1D21919D0040A32B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA1DF241D21919D0040A32B;
+			remoteInfo = HeartLink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEA1DF251D21919D0040A32B /* HeartLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA1DF291D21919D0040A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEA1DF2D1D21919D0040A32B /* HeartLink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeartLink.xcdatamodel; sourceTree = "<group>"; };
+		CEA1DF2F1D21919D0040A32B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEA1DF321D21919D0040A32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEA1DF341D21919D0040A32B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CEA1DF371D21919D0040A32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CEA1DF3D1D21919D0040A32B /* HeartLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA1DF421D21919D0040A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA1DF431D21919D0040A32B /* HeartLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartLinkTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEA1DF221D21919D0040A32B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA1DF3A1D21919D0040A32B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEA1DF1C1D21919D0040A32B = {
+			isa = PBXGroup;
+			children = (
+				CEA1DF271D21919D0040A32B /* HeartLink */,
+				CEA1DF401D21919D0040A32B /* HeartLinkTests */,
+				CEA1DF261D21919D0040A32B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEA1DF261D21919D0040A32B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1DF251D21919D0040A32B /* HeartLink.app */,
+				CEA1DF3D1D21919D0040A32B /* HeartLinkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA1DF271D21919D0040A32B /* HeartLink */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */,
+				CEA1DF2F1D21919D0040A32B /* ViewController.swift */,
+				CEA1DF311D21919D0040A32B /* Main.storyboard */,
+				CEA1DF341D21919D0040A32B /* Images.xcassets */,
+				CEA1DF361D21919D0040A32B /* LaunchScreen.xib */,
+				CEA1DF2C1D21919D0040A32B /* HeartLink.xcdatamodeld */,
+				CEA1DF281D21919D0040A32B /* Supporting Files */,
+			);
+			path = HeartLink;
+			sourceTree = "<group>";
+		};
+		CEA1DF281D21919D0040A32B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1DF291D21919D0040A32B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEA1DF401D21919D0040A32B /* HeartLinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1DF431D21919D0040A32B /* HeartLinkTests.swift */,
+				CEA1DF411D21919D0040A32B /* Supporting Files */,
+			);
+			path = HeartLinkTests;
+			sourceTree = "<group>";
+		};
+		CEA1DF411D21919D0040A32B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1DF421D21919D0040A32B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEA1DF241D21919D0040A32B /* HeartLink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA1DF471D21919D0040A32B /* Build configuration list for PBXNativeTarget "HeartLink" */;
+			buildPhases = (
+				CEA1DF211D21919D0040A32B /* Sources */,
+				CEA1DF221D21919D0040A32B /* Frameworks */,
+				CEA1DF231D21919D0040A32B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeartLink;
+			productName = HeartLink;
+			productReference = CEA1DF251D21919D0040A32B /* HeartLink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEA1DF3C1D21919D0040A32B /* HeartLinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA1DF4A1D21919D0040A32B /* Build configuration list for PBXNativeTarget "HeartLinkTests" */;
+			buildPhases = (
+				CEA1DF391D21919D0040A32B /* Sources */,
+				CEA1DF3A1D21919D0040A32B /* Frameworks */,
+				CEA1DF3B1D21919D0040A32B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEA1DF3F1D21919D0040A32B /* PBXTargetDependency */,
+			);
+			name = HeartLinkTests;
+			productName = HeartLinkTests;
+			productReference = CEA1DF3D1D21919D0040A32B /* HeartLinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEA1DF1D1D21919D0040A32B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Max;
+				TargetAttributes = {
+					CEA1DF241D21919D0040A32B = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					CEA1DF3C1D21919D0040A32B = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = CEA1DF241D21919D0040A32B;
+					};
+				};
+			};
+			buildConfigurationList = CEA1DF201D21919D0040A32B /* Build configuration list for PBXProject "HeartLink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEA1DF1C1D21919D0040A32B;
+			productRefGroup = CEA1DF261D21919D0040A32B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEA1DF241D21919D0040A32B /* HeartLink */,
+				CEA1DF3C1D21919D0040A32B /* HeartLinkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEA1DF231D21919D0040A32B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA1DF331D21919D0040A32B /* Main.storyboard in Resources */,
+				CEA1DF381D21919D0040A32B /* LaunchScreen.xib in Resources */,
+				CEA1DF351D21919D0040A32B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA1DF3B1D21919D0040A32B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEA1DF211D21919D0040A32B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA1DF301D21919D0040A32B /* ViewController.swift in Sources */,
+				CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */,
+				CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA1DF391D21919D0040A32B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA1DF441D21919D0040A32B /* HeartLinkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEA1DF3F1D21919D0040A32B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA1DF241D21919D0040A32B /* HeartLink */;
+			targetProxy = CEA1DF3E1D21919D0040A32B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEA1DF311D21919D0040A32B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA1DF321D21919D0040A32B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEA1DF361D21919D0040A32B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA1DF371D21919D0040A32B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEA1DF451D21919D0040A32B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEA1DF461D21919D0040A32B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEA1DF481D21919D0040A32B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HeartLink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEA1DF491D21919D0040A32B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HeartLink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEA1DF4B1D21919D0040A32B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HeartLinkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeartLink.app/HeartLink";
+			};
+			name = Debug;
+		};
+		CEA1DF4C1D21919D0040A32B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HeartLinkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeartLink.app/HeartLink";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEA1DF201D21919D0040A32B /* Build configuration list for PBXProject "HeartLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA1DF451D21919D0040A32B /* Debug */,
+				CEA1DF461D21919D0040A32B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA1DF471D21919D0040A32B /* Build configuration list for PBXNativeTarget "HeartLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA1DF481D21919D0040A32B /* Debug */,
+				CEA1DF491D21919D0040A32B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEA1DF4A1D21919D0040A32B /* Build configuration list for PBXNativeTarget "HeartLinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA1DF4B1D21919D0040A32B /* Debug */,
+				CEA1DF4C1D21919D0040A32B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEA1DF2C1D21919D0040A32B /* HeartLink.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEA1DF2D1D21919D0040A32B /* HeartLink.xcdatamodel */,
+			);
+			currentVersion = CEA1DF2D1D21919D0040A32B /* HeartLink.xcdatamodel */;
+			path = HeartLink.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CEA1DF1D1D21919D0040A32B /* Project object */;
+}
