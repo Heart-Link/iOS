@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0979741D57EAD4008A8DEB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0979731D57EAD4008A8DEB /* Model.swift */; };
+		CE2482431D6C807E00E96E4F /* BloodPressureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */; };
+		CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482441D6C89D200E96E4F /* WeightViewController.swift */; };
+		CE2482471D6C8D6300E96E4F /* AlcoholViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482461D6C8D6300E96E4F /* AlcoholViewController.swift */; };
+		CE2482491D6C90BE00E96E4F /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482481D6C90BE00E96E4F /* DietViewController.swift */; };
+		CE24824B1D6C93C400E96E4F /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24824A1D6C93C400E96E4F /* StressViewController.swift */; };
+		CE24824D1D6C96B500E96E4F /* SmokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */; };
+		CE5CA6E51D6A073600C6263C /* DataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E41D6A073600C6263C /* DataEntryViewController.swift */; };
+		CE5CA6E71D6A07E700C6263C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E61D6A07E700C6263C /* GameViewController.swift */; };
+		CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */; };
+		CE5CA6EB1D6A084A00C6263C /* DoctorContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6EA1D6A084A00C6263C /* DoctorContactViewController.swift */; };
 		CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */; };
 		CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2C1D21919D0040A32B /* HeartLink.xcdatamodeld */; };
-		CEA1DF301D21919D0040A32B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2F1D21919D0040A32B /* ViewController.swift */; };
+		CEA1DF301D21919D0040A32B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2F1D21919D0040A32B /* WelcomeViewController.swift */; };
 		CEA1DF331D21919D0040A32B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF311D21919D0040A32B /* Main.storyboard */; };
 		CEA1DF351D21919D0040A32B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF341D21919D0040A32B /* Images.xcassets */; };
 		CEA1DF381D21919D0040A32B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF361D21919D0040A32B /* LaunchScreen.xib */; };
@@ -27,11 +38,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0979731D57EAD4008A8DEB /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodPressureViewController.swift; sourceTree = "<group>"; };
+		CE2482441D6C89D200E96E4F /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		CE2482461D6C8D6300E96E4F /* AlcoholViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoholViewController.swift; sourceTree = "<group>"; };
+		CE2482481D6C90BE00E96E4F /* DietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
+		CE24824A1D6C93C400E96E4F /* StressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressViewController.swift; sourceTree = "<group>"; };
+		CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokeViewController.swift; sourceTree = "<group>"; };
+		CE5CA6E41D6A073600C6263C /* DataEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryViewController.swift; sourceTree = "<group>"; };
+		CE5CA6E61D6A07E700C6263C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthHistory.swift; sourceTree = "<group>"; };
+		CE5CA6EA1D6A084A00C6263C /* DoctorContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorContactViewController.swift; sourceTree = "<group>"; };
 		CEA1DF251D21919D0040A32B /* HeartLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1DF291D21919D0040A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA1DF2D1D21919D0040A32B /* HeartLink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HeartLink.xcdatamodel; sourceTree = "<group>"; };
-		CEA1DF2F1D21919D0040A32B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEA1DF2F1D21919D0040A32B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CEA1DF321D21919D0040A32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEA1DF341D21919D0040A32B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CEA1DF371D21919D0040A32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -58,6 +80,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0979711D57EAAB008A8DEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE0979731D57EAD4008A8DEB /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CE0979721D57EAB3008A8DEB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1DF2F1D21919D0040A32B /* WelcomeViewController.swift */,
+				CE5CA6E41D6A073600C6263C /* DataEntryViewController.swift */,
+				CE5CA6E61D6A07E700C6263C /* GameViewController.swift */,
+				CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */,
+				CE5CA6EA1D6A084A00C6263C /* DoctorContactViewController.swift */,
+				CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */,
+				CE2482441D6C89D200E96E4F /* WeightViewController.swift */,
+				CE2482461D6C8D6300E96E4F /* AlcoholViewController.swift */,
+				CE2482481D6C90BE00E96E4F /* DietViewController.swift */,
+				CE24824A1D6C93C400E96E4F /* StressViewController.swift */,
+				CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		CEA1DF1C1D21919D0040A32B = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +127,9 @@
 		CEA1DF271D21919D0040A32B /* HeartLink */ = {
 			isa = PBXGroup;
 			children = (
+				CE0979721D57EAB3008A8DEB /* Controllers */,
+				CE0979711D57EAAB008A8DEB /* Model */,
 				CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */,
-				CEA1DF2F1D21919D0040A32B /* ViewController.swift */,
 				CEA1DF311D21919D0040A32B /* Main.storyboard */,
 				CEA1DF341D21919D0040A32B /* Images.xcassets */,
 				CEA1DF361D21919D0040A32B /* LaunchScreen.xib */,
@@ -215,9 +264,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA1DF301D21919D0040A32B /* ViewController.swift in Sources */,
+				CEA1DF301D21919D0040A32B /* WelcomeViewController.swift in Sources */,
+				CE5CA6E51D6A073600C6263C /* DataEntryViewController.swift in Sources */,
 				CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */,
+				CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */,
+				CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */,
+				CE2482431D6C807E00E96E4F /* BloodPressureViewController.swift in Sources */,
+				CE24824D1D6C96B500E96E4F /* SmokeViewController.swift in Sources */,
 				CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */,
+				CE2482471D6C8D6300E96E4F /* AlcoholViewController.swift in Sources */,
+				CE2482491D6C90BE00E96E4F /* DietViewController.swift in Sources */,
+				CE24824B1D6C93C400E96E4F /* StressViewController.swift in Sources */,
+				CE5CA6E71D6A07E700C6263C /* GameViewController.swift in Sources */,
+				CE5CA6EB1D6A084A00C6263C /* DoctorContactViewController.swift in Sources */,
+				CE0979741D57EAD4008A8DEB /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +475,7 @@
 				CEA1DF491D21919D0040A32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEA1DF4A1D21919D0040A32B /* Build configuration list for PBXNativeTarget "HeartLinkTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +484,7 @@
 				CEA1DF4C1D21919D0040A32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
