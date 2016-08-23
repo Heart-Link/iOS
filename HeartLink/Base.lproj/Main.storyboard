@@ -655,7 +655,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4M-xc-SHq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4M-xc-SHq">
                                 <rect key="frame" x="278" y="343" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="E7d-f7-BX4"/>
@@ -673,15 +673,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.64586206879999997" green="0.458604283" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="yyQ-WJ-mwD" firstAttribute="top" secondItem="QOO-Bs-7Wo" secondAttribute="bottom" constant="13" id="5n7-q5-PM2"/>
-                            <constraint firstAttribute="centerX" secondItem="k4M-xc-SHq" secondAttribute="centerX" id="6Rw-C5-iNg"/>
-                            <constraint firstItem="DeA-Ja-WhE" firstAttribute="top" secondItem="k4M-xc-SHq" secondAttribute="bottom" constant="272" id="6SL-EB-DmS"/>
+                            <constraint firstItem="yyQ-WJ-mwD" firstAttribute="top" secondItem="QOO-Bs-7Wo" secondAttribute="bottom" constant="103" id="5n7-q5-PM2"/>
+                            <constraint firstAttribute="centerX" secondItem="k4M-xc-SHq" secondAttribute="centerX" constant="-1" id="6Rw-C5-iNg"/>
+                            <constraint firstItem="DeA-Ja-WhE" firstAttribute="top" secondItem="k4M-xc-SHq" secondAttribute="bottom" constant="227" id="6SL-EB-DmS"/>
                             <constraint firstItem="c7R-Ou-TBX" firstAttribute="top" secondItem="5EL-ER-BEU" secondAttribute="bottom" constant="7" id="8UF-hn-2wp"/>
-                            <constraint firstAttribute="centerX" secondItem="k4M-xc-SHq" secondAttribute="centerX" id="D9f-Fx-uA4"/>
+                            <constraint firstAttribute="centerX" secondItem="k4M-xc-SHq" secondAttribute="centerX" constant="-1" id="D9f-Fx-uA4"/>
                             <constraint firstItem="yyQ-WJ-mwD" firstAttribute="centerX" secondItem="mEN-ae-b6j" secondAttribute="centerX" id="E89-or-07a"/>
                             <constraint firstItem="k4M-xc-SHq" firstAttribute="leading" secondItem="mEN-ae-b6j" secondAttribute="leading" constant="278" id="Irh-o5-V7d"/>
                             <constraint firstItem="yyQ-WJ-mwD" firstAttribute="centerX" secondItem="QOO-Bs-7Wo" secondAttribute="centerX" id="Lt1-Qk-t2y"/>
-                            <constraint firstItem="QOO-Bs-7Wo" firstAttribute="top" secondItem="c7R-Ou-TBX" secondAttribute="bottom" constant="32" id="VaT-xQ-4C2"/>
+                            <constraint firstItem="QOO-Bs-7Wo" firstAttribute="top" secondItem="c7R-Ou-TBX" secondAttribute="bottom" constant="26" id="VaT-xQ-4C2"/>
                             <constraint firstItem="c7R-Ou-TBX" firstAttribute="centerX" secondItem="QOO-Bs-7Wo" secondAttribute="centerX" id="aEa-Xc-hZu"/>
                         </constraints>
                     </view>
