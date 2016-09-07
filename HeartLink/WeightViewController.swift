@@ -11,6 +11,7 @@ import UIKit
 class WeightViewController: UIViewController {
     
     @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var weight: UITextField!
     
     var model = Model.sharedInstance
     
@@ -27,6 +28,13 @@ class WeightViewController: UIViewController {
     
     @IBAction func okPressed(sender: UIButton)
     {
+        model.weight = (weight.text as NSString).integerValue
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    //ensures the number pad will close when the user presses anywhere on the screen outside of a text box
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
+    {
+        weight.resignFirstResponder()
     }
 }

@@ -11,11 +11,16 @@ import UIKit
 class AlcoholViewController: UIViewController {
     
     @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var drinks: UITextField!
+    @IBOutlet weak var question: UILabel!
     
     var model = Model.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        question.lineBreakMode = .ByWordWrapping
+        question.numberOfLines = 0
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -27,6 +32,13 @@ class AlcoholViewController: UIViewController {
     
     @IBAction func okPressed(sender: UIButton)
     {
+        model.drinks = (drinks.text as NSString).integerValue
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    //ensures the number pad will close when the user presses anywhere on the screen outside of a text box
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
+    {
+        drinks.resignFirstResponder()
     }
 }

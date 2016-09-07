@@ -336,7 +336,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="diastolic" destination="WAW-Jv-idw" id="j4T-4d-1j1"/>
                         <outlet property="okButton" destination="T35-rK-sk4" id="AYN-Xb-4ZS"/>
+                        <outlet property="systolic" destination="aLf-VI-BJe" id="nV0-ec-YYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZJ-lc-Pis" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -375,12 +377,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp3-c7-xBS">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp3-c7-xBS">
                                 <rect key="frame" x="278" y="298" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Bdc-Yd-z7F"/>
-                                    <constraint firstAttribute="width" constant="46" id="nfH-eG-lV3"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -401,20 +399,19 @@
                         <constraints>
                             <constraint firstItem="587-kZ-cO6" firstAttribute="centerX" secondItem="rT6-3F-HAB" secondAttribute="centerX" id="1s1-wz-zq7"/>
                             <constraint firstItem="KEj-DC-7cM" firstAttribute="centerX" secondItem="L3g-uG-1W5" secondAttribute="centerX" id="2qW-d2-fK0"/>
-                            <constraint firstAttribute="centerX" secondItem="Hp3-c7-xBS" secondAttribute="centerX" id="EXN-4C-edW"/>
-                            <constraint firstItem="Hp3-c7-xBS" firstAttribute="leading" secondItem="rT6-3F-HAB" secondAttribute="leading" constant="278" id="FMD-CU-Ex5"/>
                             <constraint firstItem="KEj-DC-7cM" firstAttribute="top" secondItem="Eh9-yY-b5L" secondAttribute="bottom" constant="7" id="MIT-3W-gw6"/>
+                            <constraint firstAttribute="centerY" secondItem="Hp3-c7-xBS" secondAttribute="centerY" id="QIn-xZ-E4Q"/>
                             <constraint firstItem="587-kZ-cO6" firstAttribute="top" secondItem="L3g-uG-1W5" secondAttribute="bottom" constant="13" id="Xne-YF-AuL"/>
                             <constraint firstItem="epZ-hK-vdq" firstAttribute="baseline" secondItem="587-kZ-cO6" secondAttribute="baseline" id="du4-yw-w20"/>
                             <constraint firstItem="epZ-hK-vdq" firstAttribute="leading" secondItem="587-kZ-cO6" secondAttribute="trailing" constant="8" symbolic="YES" id="n1H-KU-oGG"/>
-                            <constraint firstItem="D64-Ec-Sea" firstAttribute="top" secondItem="Hp3-c7-xBS" secondAttribute="bottom" constant="272" id="sf0-v6-NXC"/>
-                            <constraint firstAttribute="centerX" secondItem="Hp3-c7-xBS" secondAttribute="centerX" id="tYX-3W-NeM"/>
                             <constraint firstItem="L3g-uG-1W5" firstAttribute="top" secondItem="KEj-DC-7cM" secondAttribute="bottom" constant="32" id="uce-pl-Zad"/>
                             <constraint firstItem="587-kZ-cO6" firstAttribute="centerX" secondItem="L3g-uG-1W5" secondAttribute="centerX" id="vK8-OT-uBX"/>
+                            <constraint firstAttribute="centerX" secondItem="Hp3-c7-xBS" secondAttribute="centerX" id="wRf-Z6-u6i"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="okButton" destination="Hp3-c7-xBS" id="IzM-fY-ZUm"/>
+                        <outlet property="weight" destination="587-kZ-cO6" id="YeH-c5-82E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IM-EW-u0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -453,12 +450,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-OW-2oc">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7l-OW-2oc">
                                 <rect key="frame" x="278" y="298" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gAc-rL-2xU"/>
-                                    <constraint firstAttribute="width" constant="46" id="myB-YH-iRD"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -477,22 +470,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.64586206879999997" green="0.458604283" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Y7l-OW-2oc" secondAttribute="centerX" id="908-a8-07x"/>
                             <constraint firstItem="lHb-9T-aSu" firstAttribute="leading" secondItem="Qlh-gF-j4K" secondAttribute="trailing" constant="8" symbolic="YES" id="JJh-h6-IgQ"/>
                             <constraint firstItem="N6B-eB-2Ja" firstAttribute="top" secondItem="0yh-jA-enp" secondAttribute="bottom" constant="32" id="KpZ-Lu-gbx"/>
                             <constraint firstItem="0yh-jA-enp" firstAttribute="top" secondItem="BXV-oq-u7o" secondAttribute="bottom" constant="7" id="MXs-Y5-5ZU"/>
                             <constraint firstItem="Qlh-gF-j4K" firstAttribute="centerX" secondItem="N6B-eB-2Ja" secondAttribute="centerX" id="OTm-qD-S9S"/>
-                            <constraint firstAttribute="centerX" secondItem="Y7l-OW-2oc" secondAttribute="centerX" id="Wfy-vw-AmI"/>
                             <constraint firstItem="Qlh-gF-j4K" firstAttribute="centerX" secondItem="rfl-Ao-AT4" secondAttribute="centerX" id="ZmW-PG-EJt"/>
                             <constraint firstItem="0yh-jA-enp" firstAttribute="centerX" secondItem="N6B-eB-2Ja" secondAttribute="centerX" id="hc0-ac-xtS"/>
-                            <constraint firstAttribute="centerX" secondItem="Y7l-OW-2oc" secondAttribute="centerX" id="jxE-aQ-Spa"/>
-                            <constraint firstItem="Y7l-OW-2oc" firstAttribute="leading" secondItem="rfl-Ao-AT4" secondAttribute="leading" constant="278" id="mrP-ci-oiV"/>
-                            <constraint firstItem="43Q-wz-vYN" firstAttribute="top" secondItem="Y7l-OW-2oc" secondAttribute="bottom" constant="272" id="o5s-Xo-e5C"/>
+                            <constraint firstAttribute="centerY" secondItem="Y7l-OW-2oc" secondAttribute="centerY" id="r0N-ML-a2P"/>
                             <constraint firstItem="lHb-9T-aSu" firstAttribute="baseline" secondItem="Qlh-gF-j4K" secondAttribute="baseline" id="yMG-IE-OrM"/>
                             <constraint firstItem="Qlh-gF-j4K" firstAttribute="top" secondItem="N6B-eB-2Ja" secondAttribute="bottom" constant="13" id="zGu-vW-xwW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="drinks" destination="Qlh-gF-j4K" id="TZR-du-PQf"/>
                         <outlet property="okButton" destination="Y7l-OW-2oc" id="Irx-Tl-cWz"/>
+                        <outlet property="question" destination="N6B-eB-2Ja" id="9Ti-lN-yYC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0N-eO-Xeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -641,12 +634,6 @@
                                 <color key="textColor" red="1" green="0.97253954249999996" blue="0.99313488559999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 indicates no stress, while 10 indicates very high stress" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-01-ead">
-                                <rect key="frame" x="85" y="153" width="432" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.97253954249999996" blue="0.99313488559999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyQ-WJ-mwD">
                                 <rect key="frame" x="266" y="253" width="69" height="30"/>
                                 <constraints>
@@ -655,12 +642,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4M-xc-SHq">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4M-xc-SHq">
                                 <rect key="frame" x="278" y="343" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="E7d-f7-BX4"/>
-                                    <constraint firstAttribute="width" constant="46" id="ppB-jF-1Fx"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -670,23 +653,30 @@
                                     <action selector="okPressed:" destination="JjR-Zv-Z9m" eventType="touchUpInside" id="kFT-zw-DOz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 indicates no stress, while 10 indicates very high stress" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-01-ead">
+                                <rect key="frame" x="85" y="193" width="432" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.97253954249999996" blue="0.99313488559999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.64586206879999997" green="0.458604283" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yyQ-WJ-mwD" firstAttribute="top" secondItem="QOO-Bs-7Wo" secondAttribute="bottom" constant="103" id="5n7-q5-PM2"/>
-                            <constraint firstAttribute="centerX" secondItem="k4M-xc-SHq" secondAttribute="centerX" constant="-1" id="6Rw-C5-iNg"/>
-                            <constraint firstItem="DeA-Ja-WhE" firstAttribute="top" secondItem="k4M-xc-SHq" secondAttribute="bottom" constant="227" id="6SL-EB-DmS"/>
                             <constraint firstItem="c7R-Ou-TBX" firstAttribute="top" secondItem="5EL-ER-BEU" secondAttribute="bottom" constant="7" id="8UF-hn-2wp"/>
-                            <constraint firstAttribute="centerX" secondItem="k4M-xc-SHq" secondAttribute="centerX" constant="-1" id="D9f-Fx-uA4"/>
                             <constraint firstItem="yyQ-WJ-mwD" firstAttribute="centerX" secondItem="mEN-ae-b6j" secondAttribute="centerX" id="E89-or-07a"/>
-                            <constraint firstItem="k4M-xc-SHq" firstAttribute="leading" secondItem="mEN-ae-b6j" secondAttribute="leading" constant="278" id="Irh-o5-V7d"/>
                             <constraint firstItem="yyQ-WJ-mwD" firstAttribute="centerX" secondItem="QOO-Bs-7Wo" secondAttribute="centerX" id="Lt1-Qk-t2y"/>
                             <constraint firstItem="QOO-Bs-7Wo" firstAttribute="top" secondItem="c7R-Ou-TBX" secondAttribute="bottom" constant="26" id="VaT-xQ-4C2"/>
                             <constraint firstItem="c7R-Ou-TBX" firstAttribute="centerX" secondItem="QOO-Bs-7Wo" secondAttribute="centerX" id="aEa-Xc-hZu"/>
+                            <constraint firstAttribute="centerY" secondItem="k4M-xc-SHq" secondAttribute="centerY" id="bfD-g9-qrc"/>
+                            <constraint firstAttribute="centerX" secondItem="k4M-xc-SHq" secondAttribute="centerX" id="hhU-TW-je8"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="okButton" destination="k4M-xc-SHq" id="8ge-I5-FwJ"/>
+                        <outlet property="oneToTen" destination="ddr-01-ead" id="Dpn-tO-yli"/>
+                        <outlet property="stressLevel" destination="yyQ-WJ-mwD" id="HUG-8t-p0J"/>
+                        <outlet property="stressQuestion" destination="QOO-Bs-7Wo" id="hb4-bx-eFC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sG-SL-jsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -731,12 +721,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJh-FR-mpj">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJh-FR-mpj">
                                 <rect key="frame" x="278" y="298" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="67M-iE-eWk"/>
-                                    <constraint firstAttribute="height" constant="30" id="WB2-2s-Yqy"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -763,24 +749,25 @@
                         </subviews>
                         <color key="backgroundColor" red="0.64586206879999997" green="0.458604283" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5hI-zH-N8L" firstAttribute="top" secondItem="rJh-FR-mpj" secondAttribute="bottom" constant="272" id="0xO-qN-Nam"/>
-                            <constraint firstAttribute="centerX" secondItem="rJh-FR-mpj" secondAttribute="centerX" id="3Kj-1j-CXD"/>
                             <constraint firstItem="aOm-FF-L04" firstAttribute="leading" secondItem="pHc-US-74G" secondAttribute="trailing" constant="8" symbolic="YES" id="5DU-sR-G8E"/>
                             <constraint firstItem="aOm-FF-L04" firstAttribute="baseline" secondItem="pHc-US-74G" secondAttribute="baseline" constant="1" id="F6p-gD-GRI"/>
                             <constraint firstItem="Req-Ss-cOz" firstAttribute="top" secondItem="UVX-tb-LO9" secondAttribute="bottom" constant="7" id="FWw-VC-aD2"/>
                             <constraint firstItem="Req-Ss-cOz" firstAttribute="centerX" secondItem="Ymy-15-zVp" secondAttribute="centerX" constant="-16.5" id="NVW-S7-edJ"/>
                             <constraint firstItem="pHc-US-74G" firstAttribute="top" secondItem="Ymy-15-zVp" secondAttribute="bottom" constant="97" id="QDd-gF-Evb"/>
                             <constraint firstAttribute="centerX" secondItem="Ymy-15-zVp" secondAttribute="centerX" constant="-17.5" id="RS7-gs-tdg"/>
-                            <constraint firstAttribute="centerX" secondItem="rJh-FR-mpj" secondAttribute="centerX" id="aQG-19-MFD"/>
                             <constraint firstItem="pHc-US-74G" firstAttribute="centerX" secondItem="Ymy-15-zVp" secondAttribute="centerX" constant="-17" id="cYK-iV-tO0"/>
-                            <constraint firstItem="rJh-FR-mpj" firstAttribute="leading" secondItem="3dZ-Ew-BHg" secondAttribute="leading" constant="278" id="cbS-Dk-0RX"/>
                             <constraint firstAttribute="centerX" secondItem="QK5-Va-z7h" secondAttribute="centerX" constant="-196.5" id="gK3-2d-g2A"/>
+                            <constraint firstAttribute="centerY" secondItem="rJh-FR-mpj" secondAttribute="centerY" id="i8E-3l-yid"/>
                             <constraint firstItem="pHc-US-74G" firstAttribute="centerX" secondItem="3dZ-Ew-BHg" secondAttribute="centerX" id="qIm-1G-pJJ"/>
                             <constraint firstItem="Ymy-15-zVp" firstAttribute="top" secondItem="Req-Ss-cOz" secondAttribute="bottom" constant="26" id="ung-XL-YIx"/>
+                            <constraint firstAttribute="centerX" secondItem="rJh-FR-mpj" secondAttribute="centerX" id="wJ0-bT-nCB"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cigarettes" destination="pHc-US-74G" id="IRP-Fo-oCL"/>
                         <outlet property="okButton" destination="rJh-FR-mpj" id="JMn-uu-FV3"/>
+                        <outlet property="smokeQuestion" destination="QK5-Va-z7h" id="bCi-pt-1xC"/>
+                        <outlet property="yesButton" destination="FO5-9H-dh4" id="DFg-go-hA7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPl-TK-HZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
