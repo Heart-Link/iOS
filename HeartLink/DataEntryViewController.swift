@@ -28,7 +28,7 @@ class DataEntryViewController: UITableViewController {
         return model.entryOptions.count
     }
     
-    //fills the cells with the name of the city and returns the cell
+    //fills the cells with the name of the label and returns the cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell

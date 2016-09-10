@@ -14,6 +14,11 @@
 		CE2482491D6C90BE00E96E4F /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482481D6C90BE00E96E4F /* DietViewController.swift */; };
 		CE24824B1D6C93C400E96E4F /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24824A1D6C93C400E96E4F /* StressViewController.swift */; };
 		CE24824D1D6C96B500E96E4F /* SmokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */; };
+		CE5B169A1D819C6A00C60562 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B16991D819C6A00C60562 /* CustomCell.xib */; };
+		CE5B169C1D81B2A000C60562 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B169B1D81B2A000C60562 /* InboxViewController.swift */; };
+		CE5B169E1D83620900C60562 /* SentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B169D1D83620900C60562 /* SentViewController.swift */; };
+		CE5B16A11D8368EC00C60562 /* InboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B16A01D8368EC00C60562 /* InboxTableViewCell.swift */; };
+		CE5B16A31D836B2C00C60562 /* SentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B16A21D836B2C00C60562 /* SentTableViewCell.swift */; };
 		CE5CA6E51D6A073600C6263C /* DataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E41D6A073600C6263C /* DataEntryViewController.swift */; };
 		CE5CA6E71D6A07E700C6263C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E61D6A07E700C6263C /* GameViewController.swift */; };
 		CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */; };
@@ -45,6 +50,11 @@
 		CE2482481D6C90BE00E96E4F /* DietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		CE24824A1D6C93C400E96E4F /* StressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressViewController.swift; sourceTree = "<group>"; };
 		CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokeViewController.swift; sourceTree = "<group>"; };
+		CE5B16991D819C6A00C60562 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		CE5B169B1D81B2A000C60562 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		CE5B169D1D83620900C60562 /* SentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentViewController.swift; sourceTree = "<group>"; };
+		CE5B16A01D8368EC00C60562 /* InboxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxTableViewCell.swift; sourceTree = "<group>"; };
+		CE5B16A21D836B2C00C60562 /* SentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentTableViewCell.swift; sourceTree = "<group>"; };
 		CE5CA6E41D6A073600C6263C /* DataEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryViewController.swift; sourceTree = "<group>"; };
 		CE5CA6E61D6A07E700C6263C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthHistory.swift; sourceTree = "<group>"; };
@@ -102,6 +112,11 @@
 				CE2482481D6C90BE00E96E4F /* DietViewController.swift */,
 				CE24824A1D6C93C400E96E4F /* StressViewController.swift */,
 				CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */,
+				CE5B16991D819C6A00C60562 /* CustomCell.xib */,
+				CE5B169B1D81B2A000C60562 /* InboxViewController.swift */,
+				CE5B169D1D83620900C60562 /* SentViewController.swift */,
+				CE5B16A01D8368EC00C60562 /* InboxTableViewCell.swift */,
+				CE5B16A21D836B2C00C60562 /* SentTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +261,7 @@
 			files = (
 				CEA1DF331D21919D0040A32B /* Main.storyboard in Resources */,
 				CEA1DF381D21919D0040A32B /* LaunchScreen.xib in Resources */,
+				CE5B169A1D819C6A00C60562 /* CustomCell.xib in Resources */,
 				CEA1DF351D21919D0040A32B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,12 +285,16 @@
 				CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */,
 				CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */,
 				CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */,
+				CE5B16A31D836B2C00C60562 /* SentTableViewCell.swift in Sources */,
+				CE5B16A11D8368EC00C60562 /* InboxTableViewCell.swift in Sources */,
 				CE2482431D6C807E00E96E4F /* BloodPressureViewController.swift in Sources */,
 				CE24824D1D6C96B500E96E4F /* SmokeViewController.swift in Sources */,
 				CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */,
 				CE2482471D6C8D6300E96E4F /* AlcoholViewController.swift in Sources */,
 				CE2482491D6C90BE00E96E4F /* DietViewController.swift in Sources */,
+				CE5B169C1D81B2A000C60562 /* InboxViewController.swift in Sources */,
 				CE24824B1D6C93C400E96E4F /* StressViewController.swift in Sources */,
+				CE5B169E1D83620900C60562 /* SentViewController.swift in Sources */,
 				CE5CA6E71D6A07E700C6263C /* GameViewController.swift in Sources */,
 				CE5CA6EB1D6A084A00C6263C /* DoctorContactViewController.swift in Sources */,
 				CE0979741D57EAD4008A8DEB /* Model.swift in Sources */,

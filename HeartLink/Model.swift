@@ -13,6 +13,8 @@ public class Model
     //these are the options for the first screen
     let welcomeOptions = ["Enter Health Data", "See Gamification", "See Health History", "Contact Doctor"]
     let entryOptions = ["Blood Pressure", "Weight", "Alcohol Intake", "Diet", "Stress", "Smoking"]
+    let msgSenders = ["Dr. Smith"]
+    let msgSubjects = ["Check up"]
     let name = "Helga"
     
     var systolic: Int!
@@ -51,7 +53,7 @@ public class Model
     
     //apparently my scope is off because it cannot find the variables declared at the top of the model
     // :(
-    let jsonString = "{ \"systolic\":" + systolic + ", \"diastolic\":" + diastolic + ", \"weight\":" + weight + ", \"drinks\":" + drinks + ", \"stress\":" + stress + ", \"smoker\":" + smoker + ",\"cigarettes\":" + cigarettes + "}"
+    /*let jsonString = "{ \"systolic\":" + systolic + ", \"diastolic\":" + diastolic + ", \"weight\":" + weight + ", \"drinks\":" + drinks + ", \"stress\":" + stress + ", \"smoker\":" + smoker + ",\"cigarettes\":" + cigarettes + "}"*/
     
     private init()
     {

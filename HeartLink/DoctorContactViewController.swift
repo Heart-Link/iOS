@@ -10,10 +10,15 @@ import UIKit
 
 class DoctorContactViewController: UIViewController {
     
+    @IBOutlet weak var warning: UILabel!
+    
     var model = Model.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        warning.lineBreakMode = .ByWordWrapping
+        warning.numberOfLines = 0
         
         // Do any additional setup after loading the view, typically from a nib.
     }
