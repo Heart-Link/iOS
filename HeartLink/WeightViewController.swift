@@ -10,7 +10,7 @@ import UIKit
 
 class WeightViewController: UIViewController {
     
-    @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var okButton: UIImageView!
     @IBOutlet weak var weight: UITextField!
     
     var model = Model.sharedInstance
@@ -19,6 +19,13 @@ class WeightViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "blue.jpg")!)
+        
+        var imageView = okButton
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
+        imageView.userInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,11 +33,17 @@ class WeightViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func okPressed(sender: UIButton)
+    func imageTapped(img: AnyObject)
     {
         model.weight = (weight.text as NSString).integerValue
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    /*@IBAction func okPressed(sender: UIButton)
+    {
+        model.weight = (weight.text as NSString).integerValue
+        navigationController?.popViewControllerAnimated(true)
+    }*/
     
     //ensures the number pad will close when the user presses anywhere on the screen outside of a text box
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)

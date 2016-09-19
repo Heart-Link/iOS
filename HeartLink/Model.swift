@@ -53,7 +53,20 @@ public class Model
     
     //apparently my scope is off because it cannot find the variables declared at the top of the model
     // :(
-    /*let jsonString = "{ \"systolic\":" + systolic + ", \"diastolic\":" + diastolic + ", \"weight\":" + weight + ", \"drinks\":" + drinks + ", \"stress\":" + stress + ", \"smoker\":" + smoker + ",\"cigarettes\":" + cigarettes + "}"*/
+    func generateJson() -> String
+    {
+        var jsonString: String
+    
+        jsonString = "{ \"systolic\":" + String(self.systolic)
+        jsonString += ", \"diastolic\":" + String(self.diastolic)
+        jsonString += ", \"weight\":" + String(self.weight)
+        jsonString += ", \"drinks\":" + String(self.drinks)
+        jsonString += ", \"stress\":" + String(self.stress)
+        jsonString += ", \"smoker\":" + String(self.smoker)
+        jsonString += ",\"cigarettes\":" + String(self.cigarettes) + "}"
+    
+        return jsonString
+    }
     
     private init()
     {

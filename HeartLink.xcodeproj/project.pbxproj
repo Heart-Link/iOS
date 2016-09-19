@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		CE0979741D57EAD4008A8DEB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0979731D57EAD4008A8DEB /* Model.swift */; };
+		CE232B4B1D874FFE00D92A6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE232B4A1D874FFE00D92A6C /* SwiftyJSON.swift */; };
+		CE232B4D1D87504C00D92A6C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE232B4C1D87504C00D92A6C /* DataManager.swift */; };
+		CE232B951D8C79A100D92A6C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE232B8E1D8C798400D92A6C /* Alamofire.framework */; };
+		CE232B961D8C79A100D92A6C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE232B8E1D8C798400D92A6C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE232B9A1D8C7FAC00D92A6C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE232B991D8C7FAC00D92A6C /* MessageViewController.swift */; };
 		CE2482431D6C807E00E96E4F /* BloodPressureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */; };
 		CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482441D6C89D200E96E4F /* WeightViewController.swift */; };
 		CE2482471D6C8D6300E96E4F /* AlcoholViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482461D6C8D6300E96E4F /* AlcoholViewController.swift */; };
 		CE2482491D6C90BE00E96E4F /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482481D6C90BE00E96E4F /* DietViewController.swift */; };
 		CE24824B1D6C93C400E96E4F /* StressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24824A1D6C93C400E96E4F /* StressViewController.swift */; };
 		CE24824D1D6C96B500E96E4F /* SmokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */; };
+		CE4FA2241D8F368B00EAA712 /* blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE4FA2231D8F368B00EAA712 /* blue.jpg */; };
+		CE4FA2261D8F3B6300EAA712 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4FA2251D8F3B6300EAA712 /* check.png */; };
 		CE5B169A1D819C6A00C60562 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5B16991D819C6A00C60562 /* CustomCell.xib */; };
 		CE5B169C1D81B2A000C60562 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B169B1D81B2A000C60562 /* InboxViewController.swift */; };
 		CE5B169E1D83620900C60562 /* SentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B169D1D83620900C60562 /* SentViewController.swift */; };
@@ -33,6 +40,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE232B8D1D8C798400D92A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		CE232B8F1D8C798400D92A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		CE232B911D8C798400D92A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		CE232B931D8C798400D92A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		CE232B971D8C79A100D92A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		CEA1DF3E1D21919D0040A32B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEA1DF1D1D21919D0040A32B /* Project object */;
@@ -42,14 +84,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE232B831D8758B800D92A6C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE232B961D8C79A100D92A6C /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CE0979731D57EAD4008A8DEB /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CE232B4A1D874FFE00D92A6C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		CE232B4C1D87504C00D92A6C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		CE232B991D8C7FAC00D92A6C /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodPressureViewController.swift; sourceTree = "<group>"; };
 		CE2482441D6C89D200E96E4F /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		CE2482461D6C8D6300E96E4F /* AlcoholViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoholViewController.swift; sourceTree = "<group>"; };
 		CE2482481D6C90BE00E96E4F /* DietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		CE24824A1D6C93C400E96E4F /* StressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StressViewController.swift; sourceTree = "<group>"; };
 		CE24824C1D6C96B500E96E4F /* SmokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokeViewController.swift; sourceTree = "<group>"; };
+		CE4FA2231D8F368B00EAA712 /* blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blue.jpg; path = Images.xcassets/blue.jpg; sourceTree = "<group>"; };
+		CE4FA2251D8F3B6300EAA712 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = Images.xcassets/check.png; sourceTree = "<group>"; };
 		CE5B16991D819C6A00C60562 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CE5B169B1D81B2A000C60562 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
 		CE5B169D1D83620900C60562 /* SentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE232B951D8C79A100D92A6C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +156,7 @@
 		CE0979711D57EAAB008A8DEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE232B4A1D874FFE00D92A6C /* SwiftyJSON.swift */,
 				CE0979731D57EAD4008A8DEB /* Model.swift */,
 			);
 			name = Model;
@@ -115,15 +179,29 @@
 				CE5B16991D819C6A00C60562 /* CustomCell.xib */,
 				CE5B169B1D81B2A000C60562 /* InboxViewController.swift */,
 				CE5B169D1D83620900C60562 /* SentViewController.swift */,
+				CE232B991D8C7FAC00D92A6C /* MessageViewController.swift */,
+				CE232B4C1D87504C00D92A6C /* DataManager.swift */,
 				CE5B16A01D8368EC00C60562 /* InboxTableViewCell.swift */,
 				CE5B16A21D836B2C00C60562 /* SentTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		CE232B871D8C798400D92A6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE232B8E1D8C798400D92A6C /* Alamofire.framework */,
+				CE232B901D8C798400D92A6C /* Alamofire.framework */,
+				CE232B921D8C798400D92A6C /* Alamofire iOS Tests.xctest */,
+				CE232B941D8C798400D92A6C /* Alamofire OSX Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CEA1DF1C1D21919D0040A32B = {
 			isa = PBXGroup;
 			children = (
+				CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */,
 				CEA1DF271D21919D0040A32B /* HeartLink */,
 				CEA1DF401D21919D0040A32B /* HeartLinkTests */,
 				CEA1DF261D21919D0040A32B /* Products */,
@@ -157,6 +235,8 @@
 		CEA1DF281D21919D0040A32B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE4FA2231D8F368B00EAA712 /* blue.jpg */,
+				CE4FA2251D8F3B6300EAA712 /* check.png */,
 				CEA1DF291D21919D0040A32B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -189,10 +269,12 @@
 				CEA1DF211D21919D0040A32B /* Sources */,
 				CEA1DF221D21919D0040A32B /* Frameworks */,
 				CEA1DF231D21919D0040A32B /* Resources */,
+				CE232B831D8758B800D92A6C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE232B981D8C79A100D92A6C /* PBXTargetDependency */,
 			);
 			name = HeartLink;
 			productName = HeartLink;
@@ -246,6 +328,12 @@
 			mainGroup = CEA1DF1C1D21919D0040A32B;
 			productRefGroup = CEA1DF261D21919D0040A32B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CE232B871D8C798400D92A6C /* Products */;
+					ProjectRef = CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CEA1DF241D21919D0040A32B /* HeartLink */,
@@ -254,12 +342,45 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		CE232B8E1D8C798400D92A6C /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = CE232B8D1D8C798400D92A6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE232B901D8C798400D92A6C /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = CE232B8F1D8C798400D92A6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE232B921D8C798400D92A6C /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = CE232B911D8C798400D92A6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE232B941D8C798400D92A6C /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = CE232B931D8C798400D92A6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		CEA1DF231D21919D0040A32B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4FA2261D8F3B6300EAA712 /* check.png in Resources */,
 				CEA1DF331D21919D0040A32B /* Main.storyboard in Resources */,
+				CE4FA2241D8F368B00EAA712 /* blue.jpg in Resources */,
 				CEA1DF381D21919D0040A32B /* LaunchScreen.xib in Resources */,
 				CE5B169A1D819C6A00C60562 /* CustomCell.xib in Resources */,
 				CEA1DF351D21919D0040A32B /* Images.xcassets in Resources */,
@@ -281,16 +402,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA1DF301D21919D0040A32B /* WelcomeViewController.swift in Sources */,
+				CE232B4D1D87504C00D92A6C /* DataManager.swift in Sources */,
 				CE5CA6E51D6A073600C6263C /* DataEntryViewController.swift in Sources */,
 				CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */,
 				CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */,
 				CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */,
 				CE5B16A31D836B2C00C60562 /* SentTableViewCell.swift in Sources */,
 				CE5B16A11D8368EC00C60562 /* InboxTableViewCell.swift in Sources */,
+				CE232B4B1D874FFE00D92A6C /* SwiftyJSON.swift in Sources */,
 				CE2482431D6C807E00E96E4F /* BloodPressureViewController.swift in Sources */,
 				CE24824D1D6C96B500E96E4F /* SmokeViewController.swift in Sources */,
 				CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */,
 				CE2482471D6C8D6300E96E4F /* AlcoholViewController.swift in Sources */,
+				CE232B9A1D8C7FAC00D92A6C /* MessageViewController.swift in Sources */,
 				CE2482491D6C90BE00E96E4F /* DietViewController.swift in Sources */,
 				CE5B169C1D81B2A000C60562 /* InboxViewController.swift in Sources */,
 				CE24824B1D6C93C400E96E4F /* StressViewController.swift in Sources */,
@@ -312,6 +436,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE232B981D8C79A100D92A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = CE232B971D8C79A100D92A6C /* PBXContainerItemProxy */;
+		};
 		CEA1DF3F1D21919D0040A32B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CEA1DF241D21919D0040A32B /* HeartLink */;
