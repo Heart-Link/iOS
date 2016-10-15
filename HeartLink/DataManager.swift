@@ -34,6 +34,9 @@ class DataManager {
     
     class func getMessageWithSuccess(success: ((messageData: NSData!) -> Void)) {
         
+        var model = Model.sharedInstance
+        jsonRequest = model.messageJson
+        
         var request = NSMutableURLRequest(URL: NSURL(string: messageURL)!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
         
         request.HTTPBody = jsonRequest.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)

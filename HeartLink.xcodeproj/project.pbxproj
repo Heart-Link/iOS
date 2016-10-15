@@ -12,7 +12,6 @@
 		CE232B4D1D87504C00D92A6C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE232B4C1D87504C00D92A6C /* DataManager.swift */; };
 		CE232B951D8C79A100D92A6C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE232B8E1D8C798400D92A6C /* Alamofire.framework */; };
 		CE232B961D8C79A100D92A6C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE232B8E1D8C798400D92A6C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE232B9A1D8C7FAC00D92A6C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE232B991D8C7FAC00D92A6C /* MessageViewController.swift */; };
 		CE2482431D6C807E00E96E4F /* BloodPressureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */; };
 		CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482441D6C89D200E96E4F /* WeightViewController.swift */; };
 		CE2482471D6C8D6300E96E4F /* AlcoholViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2482461D6C8D6300E96E4F /* AlcoholViewController.swift */; };
@@ -30,6 +29,11 @@
 		CE5CA6E71D6A07E700C6263C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E61D6A07E700C6263C /* GameViewController.swift */; };
 		CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */; };
 		CE5CA6EB1D6A084A00C6263C /* DoctorContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CA6EA1D6A084A00C6263C /* DoctorContactViewController.swift */; };
+		CE5D48C51D9EE8DD005A0302 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D48C41D9EE8DD005A0302 /* MessageViewController.swift */; };
+		CE5E889C1DB2AD13005548ED /* HeartLink Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5E889B1DB2AD13005548ED /* HeartLink Logo.png */; };
+		CE5E88A11DB2AE21005548ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E88A01DB2AE21005548ED /* LoginViewController.swift */; };
+		CE6D47F21DA3FAAF000CBF20 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6D47F11DA3FAAF000CBF20 /* HealthKit.framework */; };
+		CE77B89E1DAD21A200545F82 /* HealthKitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77B89D1DAD21A200545F82 /* HealthKitEntity.swift */; };
 		CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */; };
 		CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2C1D21919D0040A32B /* HeartLink.xcdatamodeld */; };
 		CEA1DF301D21919D0040A32B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2F1D21919D0040A32B /* WelcomeViewController.swift */; };
@@ -37,6 +41,7 @@
 		CEA1DF351D21919D0040A32B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF341D21919D0040A32B /* Images.xcassets */; };
 		CEA1DF381D21919D0040A32B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA1DF361D21919D0040A32B /* LaunchScreen.xib */; };
 		CEA1DF441D21919D0040A32B /* HeartLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF431D21919D0040A32B /* HeartLinkTests.swift */; };
+		D45271D5399ECA56F5B3805A /* Pods_HeartLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF597569CF4BA76F0F2F9C7F /* Pods_HeartLink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,11 +104,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C4966F0C21ACD453B9DF83E /* Pods-HeartLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeartLink/Pods-HeartLink.release.xcconfig"; sourceTree = "<group>"; };
 		CE0979731D57EAD4008A8DEB /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CE232B4A1D874FFE00D92A6C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		CE232B4C1D87504C00D92A6C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
-		CE232B991D8C7FAC00D92A6C /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodPressureViewController.swift; sourceTree = "<group>"; };
 		CE2482441D6C89D200E96E4F /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		CE2482461D6C8D6300E96E4F /* AlcoholViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlcoholViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +126,12 @@
 		CE5CA6E61D6A07E700C6263C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthHistory.swift; sourceTree = "<group>"; };
 		CE5CA6EA1D6A084A00C6263C /* DoctorContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorContactViewController.swift; sourceTree = "<group>"; };
+		CE5D48C41D9EE8DD005A0302 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		CE5E889B1DB2AD13005548ED /* HeartLink Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HeartLink Logo.png"; path = "../../../Downloads/HeartLink Logo.png"; sourceTree = "<group>"; };
+		CE5E88A01DB2AE21005548ED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE6D47F01DA3FAAF000CBF20 /* HeartLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HeartLink.entitlements; sourceTree = "<group>"; };
+		CE6D47F11DA3FAAF000CBF20 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		CE77B89D1DAD21A200545F82 /* HealthKitEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitEntity.swift; sourceTree = "<group>"; };
 		CEA1DF251D21919D0040A32B /* HeartLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1DF291D21919D0040A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +143,8 @@
 		CEA1DF3D1D21919D0040A32B /* HeartLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1DF421D21919D0040A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA1DF431D21919D0040A32B /* HeartLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartLinkTests.swift; sourceTree = "<group>"; };
+		F7DB97C3F0345D4F9727BB6A /* Pods-HeartLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartLink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeartLink/Pods-HeartLink.debug.xcconfig"; sourceTree = "<group>"; };
+		FF597569CF4BA76F0F2F9C7F /* Pods_HeartLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +152,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6D47F21DA3FAAF000CBF20 /* HealthKit.framework in Frameworks */,
 				CE232B951D8C79A100D92A6C /* Alamofire.framework in Frameworks */,
+				D45271D5399ECA56F5B3805A /* Pods_HeartLink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +168,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CAA6714830D28E3443C7E60C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE6D47F11DA3FAAF000CBF20 /* HealthKit.framework */,
+				FF597569CF4BA76F0F2F9C7F /* Pods_HeartLink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE0979711D57EAAB008A8DEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,10 +203,12 @@
 				CE5B16991D819C6A00C60562 /* CustomCell.xib */,
 				CE5B169B1D81B2A000C60562 /* InboxViewController.swift */,
 				CE5B169D1D83620900C60562 /* SentViewController.swift */,
-				CE232B991D8C7FAC00D92A6C /* MessageViewController.swift */,
 				CE232B4C1D87504C00D92A6C /* DataManager.swift */,
 				CE5B16A01D8368EC00C60562 /* InboxTableViewCell.swift */,
 				CE5B16A21D836B2C00C60562 /* SentTableViewCell.swift */,
+				CE5D48C41D9EE8DD005A0302 /* MessageViewController.swift */,
+				CE77B89D1DAD21A200545F82 /* HealthKitEntity.swift */,
+				CE5E88A01DB2AE21005548ED /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +231,8 @@
 				CEA1DF271D21919D0040A32B /* HeartLink */,
 				CEA1DF401D21919D0040A32B /* HeartLinkTests */,
 				CEA1DF261D21919D0040A32B /* Products */,
+				FA98A643EEE1E261E850E0D9 /* Pods */,
+				CAA6714830D28E3443C7E60C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +248,7 @@
 		CEA1DF271D21919D0040A32B /* HeartLink */ = {
 			isa = PBXGroup;
 			children = (
+				CE6D47F01DA3FAAF000CBF20 /* HeartLink.entitlements */,
 				CE0979721D57EAB3008A8DEB /* Controllers */,
 				CE0979711D57EAAB008A8DEB /* Model */,
 				CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */,
@@ -235,6 +264,7 @@
 		CEA1DF281D21919D0040A32B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE5E889B1DB2AD13005548ED /* HeartLink Logo.png */,
 				CE4FA2231D8F368B00EAA712 /* blue.jpg */,
 				CE4FA2251D8F3B6300EAA712 /* check.png */,
 				CEA1DF291D21919D0040A32B /* Info.plist */,
@@ -259,6 +289,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA98A643EEE1E261E850E0D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7DB97C3F0345D4F9727BB6A /* Pods-HeartLink.debug.xcconfig */,
+				5C4966F0C21ACD453B9DF83E /* Pods-HeartLink.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,10 +305,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEA1DF471D21919D0040A32B /* Build configuration list for PBXNativeTarget "HeartLink" */;
 			buildPhases = (
+				AA5281C34D6A1FCEB41E34C5 /* [CP] Check Pods Manifest.lock */,
 				CEA1DF211D21919D0040A32B /* Sources */,
 				CEA1DF221D21919D0040A32B /* Frameworks */,
 				CEA1DF231D21919D0040A32B /* Resources */,
 				CE232B831D8758B800D92A6C /* Embed Frameworks */,
+				88550D28E71F0C752C660120 /* [CP] Embed Pods Frameworks */,
+				AAE65AD7F6A9CC9CD17187E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +352,12 @@
 				TargetAttributes = {
 					CEA1DF241D21919D0040A32B = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 9NTVF3V67K;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					CEA1DF3C1D21919D0040A32B = {
 						CreatedOnToolsVersion = 6.3;
@@ -378,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5E889C1DB2AD13005548ED /* HeartLink Logo.png in Resources */,
 				CE4FA2261D8F3B6300EAA712 /* check.png in Resources */,
 				CEA1DF331D21919D0040A32B /* Main.storyboard in Resources */,
 				CE4FA2241D8F368B00EAA712 /* blue.jpg in Resources */,
@@ -396,6 +445,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		88550D28E71F0C752C660120 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeartLink/Pods-HeartLink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA5281C34D6A1FCEB41E34C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AAE65AD7F6A9CC9CD17187E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeartLink/Pods-HeartLink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEA1DF211D21919D0040A32B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -404,6 +501,7 @@
 				CEA1DF301D21919D0040A32B /* WelcomeViewController.swift in Sources */,
 				CE232B4D1D87504C00D92A6C /* DataManager.swift in Sources */,
 				CE5CA6E51D6A073600C6263C /* DataEntryViewController.swift in Sources */,
+				CE5E88A11DB2AE21005548ED /* LoginViewController.swift in Sources */,
 				CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */,
 				CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */,
 				CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */,
@@ -414,7 +512,7 @@
 				CE24824D1D6C96B500E96E4F /* SmokeViewController.swift in Sources */,
 				CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */,
 				CE2482471D6C8D6300E96E4F /* AlcoholViewController.swift in Sources */,
-				CE232B9A1D8C7FAC00D92A6C /* MessageViewController.swift in Sources */,
+				CE5D48C51D9EE8DD005A0302 /* MessageViewController.swift in Sources */,
 				CE2482491D6C90BE00E96E4F /* DietViewController.swift in Sources */,
 				CE5B169C1D81B2A000C60562 /* InboxViewController.swift in Sources */,
 				CE24824B1D6C93C400E96E4F /* StressViewController.swift in Sources */,
@@ -422,6 +520,7 @@
 				CE5CA6E71D6A07E700C6263C /* GameViewController.swift in Sources */,
 				CE5CA6EB1D6A084A00C6263C /* DoctorContactViewController.swift in Sources */,
 				CE0979741D57EAD4008A8DEB /* Model.swift in Sources */,
+				CE77B89E1DAD21A200545F82 /* HealthKitEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,21 +652,31 @@
 		};
 		CEA1DF481D21919D0040A32B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7DB97C3F0345D4F9727BB6A /* Pods-HeartLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeartLink/HeartLink.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeartLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		CEA1DF491D21919D0040A32B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C4966F0C21ACD453B9DF83E /* Pods-HeartLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HeartLink/HeartLink.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeartLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

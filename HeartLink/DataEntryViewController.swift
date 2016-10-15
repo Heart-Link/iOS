@@ -28,7 +28,7 @@ class DataEntryViewController: UITableViewController {
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Arial", size: 20)!]
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,7 +77,7 @@ class DataEntryViewController: UITableViewController {
         options = model.entryOptions[indexPath.row]
         
         cell.textLabel!.text = options
-        cell.textLabel!.font = UIFont(name: "Arial", size: 30)!
+        cell.textLabel!.font = UIFont(name: "Avenir Next", size: 30)!
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         

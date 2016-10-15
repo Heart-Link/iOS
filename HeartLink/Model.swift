@@ -11,7 +11,7 @@ import Foundation
 public class Model
 {
     //these are the options for the first screen
-    let welcomeOptions = ["Enter Health Data", "See Gamification", "See Health History", "Contact Doctor"]
+    let welcomeOptions = ["Enter Health Data", "See Gamification", "See Health History", "Contact Doctor", "Logout"]
     let entryOptions = ["Blood Pressure", "Weight", "Alcohol Intake", "Diet", "Stress", "Smoking"]
     let msgSenders = ["Dr. Smith"]
     let msgSubjects = ["Check up"]
@@ -24,6 +24,8 @@ public class Model
     var stress: Int!
     var smoker: Int!
     var cigarettes: Int!
+    
+    var messageJson: String!
     
     private struct Static
     {
@@ -57,14 +59,23 @@ public class Model
     {
         var jsonString: String
     
-        jsonString = "{ \"systolic\":" + String(self.systolic)
+        /*jsonString = "{ \"systolic\":" + String(self.systolic)
         jsonString += ", \"diastolic\":" + String(self.diastolic)
         jsonString += ", \"weight\":" + String(self.weight)
         jsonString += ", \"drinks\":" + String(self.drinks)
         jsonString += ", \"stress\":" + String(self.stress)
         jsonString += ", \"smoker\":" + String(self.smoker)
         jsonString += ",\"cigarettes\":" + String(self.cigarettes) + "}"
-    
+        */
+        
+        jsonString = "recommendedVitals:{bpHigh:{type:" + String(self.systolic) + "}, "
+        jsonString += "bpLow:{type:" + String(self.diastolic) + "}, "
+        jsonString += "weight:{type:" + String(self.weight) + "}, "
+        //jsonString += "exerciseTime:{type:" + exerciseTime + "}, "
+        jsonString += "alcoholIntake:{type:" + String(self.drinks) + "}, "
+        //jsonString += "steps:{type:" + steps + "}, "
+        //jsonString += "averageHR:{type:" + bpm + "}, "
+        jsonString += "stressLevel:{type:" + String(self.stress) + "}}"
         return jsonString
     }
     
