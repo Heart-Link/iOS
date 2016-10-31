@@ -9,33 +9,22 @@
 import Foundation
 import Alamofire
 
-let messageURL = "http://ec2-54-163-104-129.compute-1.amazonaws.com:8080/api/messages/patient/send"
+let messageURL = "http://ec2-54-163-104-129.compute-1.amazonaws.com:8080/patient/submitData"
+let loginURL = "http://ec2-54-163-104-129.compute-1.amazonaws.com:8080/login/patient"
 
 var response: NSURLResponse?
 var error: NSError?
 var responseData = NSMutableData()
 var jsonResponse: String?
 var session = NSURLSession.sharedSession()
-var jsonRequest: String!
+var jsonRequest: AnyObject!
 
 class DataManager {
-    
-    /*Alamofire.upload(
-    .POST,
-    "http://api.imagga.com/v1/content",
-    headers: ["Authorization" : "Basic xxx"],
-    multipartFormData: { multipartFormData in
-    multipartFormData.appendBodyPart(data: imageData, name: "imagefile",
-    fileName: "image.jpg", mimeType: "image/jpeg")
-    },
-    encodingCompletion: { encodingResult in
-    }
-    )*/
     
     class func getMessageWithSuccess(success: ((messageData: NSData!) -> Void)) {
         
         var model = Model.sharedInstance
-        jsonRequest = model.messageJson
+        /*jsonRequest = model.generateJson()
         
         var request = NSMutableURLRequest(URL: NSURL(string: messageURL)!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
         
@@ -59,25 +48,21 @@ class DataManager {
         })
         
         task.resume()
-        println(task.state)
+        println(task.state)*/
+        
+        Alamofire.request(.POST, messageURL, parameters: model.generateJson(), encoding: .URL).validate().response{request, response, data, error in let dataString = NSString(data: data! as! NSData, encoding: NSUTF8StringEncoding)
+            println(dataString)}
     }
     
-    /*class func getAirportCodeFromFileWithSuccess(success: ((data: NSData) -> Void)) {
-        //1
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            //2
-            let filePath = NSBundle.mainBundle().pathForResource("AirportCodes",ofType:"json")
-            
-            var readError:NSError?
-            if let data = NSData(contentsOfFile:filePath!,
-                options: NSDataReadingOptions.DataReadingUncached,
-                error:&readError) {
-                    success(data: data)
-            }
-        })
-    }*/
+    class func getLoginWithSuccess(success: ((loginData: NSData!) -> Void)) {
+        
+        var model = Model.sharedInstance
+        
+        Alamofire.request(.POST, loginURL, parameters: model.generateLoginJson(), encoding: .URL).validate().response{request, response, data, error in let dataString = NSString(data: data! as! NSData, encoding: NSUTF8StringEncoding)
+            println(dataString)}
+    }
     
-    class func setJson(searchJson: String) -> Void
+    class func setJson(searchJson: AnyObject) -> Void
     {
         jsonRequest = searchJson
     }

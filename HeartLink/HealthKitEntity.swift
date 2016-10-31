@@ -11,7 +11,13 @@ import HealthKit
 
 class HealthKitEntity
 {
+    var model = Model.sharedInstance
+    
     let healthKitStore:HKHealthStore = HKHealthStore()
+    let heartRateType: HKSampleType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
+    var HRQuery: HKSampleQuery?
+    
+    let stepsCount = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
     
     func authorizeHealthKit(completion: ((success: Bool, error: NSError!) -> Void)!)
     {
@@ -43,34 +49,79 @@ class HealthKitEntity
                 completion(success:success,error:error)
             }
         }
+        
+        /*let stepsQuery = HKSampleQuery(sampleType: HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount), predicate: nil, limit: 100, sortDescriptors: nil)
+            { (query, results, error) in
+                if let results = results as? [HKQuantitySample] {
+                    let steps = results
+                    println(steps)
+                    //self.tableView.reloadData()
+                }
+                //self.activityIndicator.stopAnimating()
+        }
+        
+        let HRQuery = HKSampleQuery(sampleType: HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate), predicate: nil, limit: 100, sortDescriptors: nil)
+            { (query, results, error) in
+                if let results = results as? [HKQuantitySample] {
+                    let rate = results
+                    println(rate)
+                    //self.tableView.reloadData()
+                }
+                //self.activityIndicator.stopAnimating()
+        }
+        
+        healthKitStore.executeQuery(stepsQuery)
+        healthKitStore.executeQuery(HRQuery)*/
+        
+        readHealthData()
     }
     
-    /*func readProfile() -> (heartRate: Int?, steps: Int?)
+    func readHealthData()
     {
         var error: NSError?
         var heartRate: Int?
         
-        //heartRate = healthKitStore.(&error)
+        let sortDescriptors = [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)]
         
-        if error != nil
-        {
-            println("Error reading Birthday: \(error)")
+        let heartRateType: HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)!
+        let calendar = NSCalendar.currentCalendar()
+        let now = NSDate()
+        let year = calendar.components(NSCalendarUnit.YearCalendarUnit, fromDate: now)
+        let month = calendar.components(NSCalendarUnit.MonthCalendarUnit, fromDate: now)
+        let day = calendar.components(NSCalendarUnit.DayCalendarUnit, fromDate: now)
+        let dateComponents = NSDateComponents()
+        dateComponents.year = year.year
+        dateComponents.month = month.month
+        dateComponents.day = day.day
+        
+        let startDate: NSDate = calendar.dateFromComponents(dateComponents)!
+        let endDate: NSDate? = calendar.dateByAddingUnit(NSCalendarUnit.DayCalendarUnit, value: 1, toDate: startDate, options: nil)
+        let predicate = HKQuery.predicateForSamplesWithStartDate(startDate, endDate: endDate, options: .None)
+        
+        HRQuery = HKSampleQuery(sampleType: HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate), predicate: predicate, limit: 25, sortDescriptors: nil)
+            { (query, results, error) in
+                if let results = results as? [HKQuantitySample] {
+                    if results.count > 0
+                    {
+                        self.model.heartRate = results[0].quantity
+                        println(self.model.heartRate)
+                    }
+                }
         }
-    
-        var biologicalSex:HKBiologicalSexObject? = healthKitStore.biologicalSexWithError(&error)
         
-        if error != nil
-        {
-            println("Error reading Biological Sex: \(error)")
+            healthKitStore.executeQuery(HRQuery)
+        
+        let stepQuery = HKSampleQuery(sampleType: HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount), predicate: predicate, limit: 25, sortDescriptors: nil)
+            { (query, results, error) in
+                if let results = results as? [HKQuantitySample] {
+                    if results.count > 0
+                    {
+                        self.model.steps = results[0].quantity
+                        println(self.model.steps)
+                    }
+                }
         }
-    
-        var bloodType:HKBloodTypeObject? = healthKitStore.bloodTypeWithError(&error)
         
-        if error != nil
-        {
-            println("Error reading Blood Type: \(error)")
+        healthKitStore.executeQuery(stepQuery)
         }
-        
-        return (age, biologicalSex, bloodType)
-    }*/
-}
+    }

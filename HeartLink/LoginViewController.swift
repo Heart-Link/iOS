@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class LoginViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var spinningWheel: UIActivityIndicatorView!
+    
+    var model = Model.sharedInstance
     
     let healthKitEntity: HealthKitEntity = HealthKitEntity()
 
@@ -77,8 +80,40 @@ class LoginViewController: UIViewController {
     @IBAction func loginPressed(sender: UIButton)
     {
         self.spinningWheel.hidden = false
+        model.username = usernameField.text
+        model.password = passwordField.text
+        model.deviceId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        DataManager.setJson(model.generateLoginJson())
+        DataManager.getLoginWithSuccess {(resultsData) -> Void in
+            let json = JSON(data: resultsData)
+        }
+        
         authorizeHealthKit()
     }
+    
+    /*func saveName(name: String)
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("Patient",
+            inManagedObjectContext:managedContext)
+        
+        let patient = NSManagedObject(entity: entity!,
+            insertIntoManagedObjectContext: managedContext)
+        
+        person.setValue(name, forKey: "name")
+        
+        do {
+        try managedContext.save()
+        
+        people.append(person)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }*/
     
     /*
     // MARK: - Navigation

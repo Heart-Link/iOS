@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import HealthKit
+import CoreData
 
 public class Model
 {
@@ -24,8 +26,16 @@ public class Model
     var stress: Int!
     var smoker: Int!
     var cigarettes: Int!
+    var exerciseTime: Int!
+    var heartRate: HKQuantity!
+    var steps: HKQuantity!
+    var dates = [String]()
+    var patientId: String = "7779"
     
     var messageJson: String!
+    var username: String!
+    var password: String!
+    var deviceId: String!
     
     private struct Static
     {
@@ -42,45 +52,42 @@ public class Model
         return Static.instance!
     }
     
-    let format = ["name": 1]
-    
-    let jsonObject: [String: AnyObject] = [
-        "systolic": 1,
-        "diastolic": 1,
-        "weight": 1,
-        "drinks": 1,
-        "stress": 1,
-        "smoker": 1,
-        "cigarettes": 1]
-    
-    //apparently my scope is off because it cannot find the variables declared at the top of the model
-    // :(
-    func generateJson() -> String
+    func generateJson() -> [String: AnyObject]
     {
         var jsonString: String
-    
-        /*jsonString = "{ \"systolic\":" + String(self.systolic)
-        jsonString += ", \"diastolic\":" + String(self.diastolic)
-        jsonString += ", \"weight\":" + String(self.weight)
-        jsonString += ", \"drinks\":" + String(self.drinks)
-        jsonString += ", \"stress\":" + String(self.stress)
-        jsonString += ", \"smoker\":" + String(self.smoker)
-        jsonString += ",\"cigarettes\":" + String(self.cigarettes) + "}"
-        */
         
-        jsonString = "recommendedVitals:{bpHigh:{type:" + String(self.systolic) + "}, "
-        jsonString += "bpLow:{type:" + String(self.diastolic) + "}, "
-        jsonString += "weight:{type:" + String(self.weight) + "}, "
-        //jsonString += "exerciseTime:{type:" + exerciseTime + "}, "
-        jsonString += "alcoholIntake:{type:" + String(self.drinks) + "}, "
-        //jsonString += "steps:{type:" + steps + "}, "
-        //jsonString += "averageHR:{type:" + bpm + "}, "
-        jsonString += "stressLevel:{type:" + String(self.stress) + "}}"
-        return jsonString
+        let jsonObject: [String: AnyObject] = [
+            "bpHigh": String(self.systolic),
+            "bpLow": String(self.diastolic),
+            "weight": String(self.weight),
+            "exerciseTime": String(self.exerciseTime),
+            "alcoholIntake": String(self.drinks),
+            "steps": String(stringInterpolationSegment: self.steps),
+            "averageHR": String(stringInterpolationSegment: self.heartRate),
+            "stressLevel": String(self.stress),
+            "smoke": String(self.cigarettes),
+            "patientID": patientId
+        ]
+        
+        return jsonObject
+    }
+    
+    func generateLoginJson() -> [String: AnyObject]
+    {
+        let jsonObject: [String: AnyObject] = ["username": username, "password": password, "deviceID": deviceId]
+        
+        return jsonObject
     }
     
     private init()
     {
-        
+        self.systolic = -1
+        self.diastolic = -1
+        self.weight = -1
+        self.drinks = -1
+        self.stress = -1
+        self.smoker = -1
+        self.cigarettes = -1
+        self.exerciseTime = -1
     }
 }

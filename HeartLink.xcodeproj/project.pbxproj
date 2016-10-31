@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE0979741D57EAD4008A8DEB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0979731D57EAD4008A8DEB /* Model.swift */; };
+		CE2224D61DC7E12800B91ED7 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2224D51DC7E12800B91ED7 /* HistoryDetailViewController.swift */; };
 		CE232B4B1D874FFE00D92A6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE232B4A1D874FFE00D92A6C /* SwiftyJSON.swift */; };
 		CE232B4D1D87504C00D92A6C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE232B4C1D87504C00D92A6C /* DataManager.swift */; };
 		CE232B951D8C79A100D92A6C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE232B8E1D8C798400D92A6C /* Alamofire.framework */; };
@@ -106,6 +107,7 @@
 /* Begin PBXFileReference section */
 		5C4966F0C21ACD453B9DF83E /* Pods-HeartLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartLink.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeartLink/Pods-HeartLink.release.xcconfig"; sourceTree = "<group>"; };
 		CE0979731D57EAD4008A8DEB /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CE2224D51DC7E12800B91ED7 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		CE232B4A1D874FFE00D92A6C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		CE232B4C1D87504C00D92A6C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE232B861D8C798400D92A6C /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				CE5CA6E41D6A073600C6263C /* DataEntryViewController.swift */,
 				CE5CA6E61D6A07E700C6263C /* GameViewController.swift */,
 				CE5CA6E81D6A080E00C6263C /* HealthHistory.swift */,
+				CE2224D51DC7E12800B91ED7 /* HistoryDetailViewController.swift */,
 				CE5CA6EA1D6A084A00C6263C /* DoctorContactViewController.swift */,
 				CE2482421D6C807E00E96E4F /* BloodPressureViewController.swift */,
 				CE2482441D6C89D200E96E4F /* WeightViewController.swift */,
@@ -203,10 +206,10 @@
 				CE5B16991D819C6A00C60562 /* CustomCell.xib */,
 				CE5B169B1D81B2A000C60562 /* InboxViewController.swift */,
 				CE5B169D1D83620900C60562 /* SentViewController.swift */,
-				CE232B4C1D87504C00D92A6C /* DataManager.swift */,
 				CE5B16A01D8368EC00C60562 /* InboxTableViewCell.swift */,
 				CE5B16A21D836B2C00C60562 /* SentTableViewCell.swift */,
 				CE5D48C41D9EE8DD005A0302 /* MessageViewController.swift */,
+				CE232B4C1D87504C00D92A6C /* DataManager.swift */,
 				CE77B89D1DAD21A200545F82 /* HealthKitEntity.swift */,
 				CE5E88A01DB2AE21005548ED /* LoginViewController.swift */,
 			);
@@ -506,6 +509,7 @@
 				CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */,
 				CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */,
 				CE5B16A31D836B2C00C60562 /* SentTableViewCell.swift in Sources */,
+				CE2224D61DC7E12800B91ED7 /* HistoryDetailViewController.swift in Sources */,
 				CE5B16A11D8368EC00C60562 /* InboxTableViewCell.swift in Sources */,
 				CE232B4B1D874FFE00D92A6C /* SwiftyJSON.swift in Sources */,
 				CE2482431D6C807E00E96E4F /* BloodPressureViewController.swift in Sources */,
