@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D131" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Patient" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Patient" representedClassName="HeartLink.Patient" syncable="YES">
+        <attribute name="alcohol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="convoID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diastolic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emrID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameification" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heartRate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="networkID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patientID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="smoke" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="steps" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="systolic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tokenID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Patient" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Patient" positionX="-63" positionY="-18" width="128" height="300"/>
     </elements>
 </model>

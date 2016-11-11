@@ -24,7 +24,7 @@ class DataEntryViewController: UITableViewController {
         
         navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+        //UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]

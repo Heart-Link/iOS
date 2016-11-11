@@ -35,6 +35,7 @@
 		CE5E88A11DB2AE21005548ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E88A01DB2AE21005548ED /* LoginViewController.swift */; };
 		CE6D47F21DA3FAAF000CBF20 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6D47F11DA3FAAF000CBF20 /* HealthKit.framework */; };
 		CE77B89E1DAD21A200545F82 /* HealthKitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77B89D1DAD21A200545F82 /* HealthKitEntity.swift */; };
+		CE7CAB941DD632AB005A4A54 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CAB931DD632AB005A4A54 /* Patient.swift */; };
 		CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */; };
 		CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2C1D21919D0040A32B /* HeartLink.xcdatamodeld */; };
 		CEA1DF301D21919D0040A32B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2F1D21919D0040A32B /* WelcomeViewController.swift */; };
@@ -134,6 +135,7 @@
 		CE6D47F01DA3FAAF000CBF20 /* HeartLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HeartLink.entitlements; sourceTree = "<group>"; };
 		CE6D47F11DA3FAAF000CBF20 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		CE77B89D1DAD21A200545F82 /* HealthKitEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitEntity.swift; sourceTree = "<group>"; };
+		CE7CAB931DD632AB005A4A54 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		CEA1DF251D21919D0040A32B /* HeartLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1DF291D21919D0040A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				CE232B4A1D874FFE00D92A6C /* SwiftyJSON.swift */,
 				CE0979731D57EAD4008A8DEB /* Model.swift */,
+				CE7CAB931DD632AB005A4A54 /* Patient.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -476,7 +479,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		AAE65AD7F6A9CC9CD17187E9 /* [CP] Copy Pods Resources */ = {
@@ -505,6 +508,7 @@
 				CE232B4D1D87504C00D92A6C /* DataManager.swift in Sources */,
 				CE5CA6E51D6A073600C6263C /* DataEntryViewController.swift in Sources */,
 				CE5E88A11DB2AE21005548ED /* LoginViewController.swift in Sources */,
+				CE7CAB941DD632AB005A4A54 /* Patient.swift in Sources */,
 				CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */,
 				CE5CA6E91D6A080E00C6263C /* HealthHistory.swift in Sources */,
 				CE2482451D6C89D200E96E4F /* WeightViewController.swift in Sources */,

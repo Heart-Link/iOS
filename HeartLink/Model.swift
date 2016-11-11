@@ -36,6 +36,9 @@ public class Model
     var username: String!
     var password: String!
     var deviceId: String!
+    var date: String
+    
+    let dateC = NSDateComponents()
     
     private struct Static
     {
@@ -52,9 +55,9 @@ public class Model
         return Static.instance!
     }
     
-    func generateJson() -> [String: AnyObject]
+    func generateJson() -> String
     {
-        var jsonString: String
+        /*var jsonString: String
         
         let jsonObject: [String: AnyObject] = [
             "bpHigh": String(self.systolic),
@@ -67,16 +70,42 @@ public class Model
             "stressLevel": String(self.stress),
             "smoke": String(self.cigarettes),
             "patientID": patientId
-        ]
+        ]*/
+        
+        let jsonObject: String = "{\"bpHigh\": \"" + String(systolic) + "\", \"bpLow\": \"" + String(diastolic) + "\", \"weight\": \"" + String(weight) + "\", \"exerciseTime\": \"" + String(exerciseTime) + "\", \"alcoholIntake\": \"" + String(drinks) + "\", \"steps\": \"" + String(stringInterpolationSegment: steps) + "\", \"averageHR\": \"" + String(stringInterpolationSegment: heartRate) + "\", \"stressLevel\": \"" + String(stress) + "\", \"smoke\": \"" + String(cigarettes) + "\", \"patientID\": \"" + String(patientId) + "\"}"
         
         return jsonObject
     }
     
-    func generateLoginJson() -> [String: AnyObject]
+    /*func generateLoginJson() -> [String: AnyObject]
     {
-        let jsonObject: [String: AnyObject] = ["username": username, "password": password, "deviceID": deviceId]
+        let jsonObject: [String: AnyObject] = ["email": username, "password": password, "deviceID": deviceId]
         
         return jsonObject
+    }*/
+    
+    func generateLoginJson() -> String
+    {
+        let jsonObject: String = "{\"email\": \"" + username + "\", \"password\": \"" + password + "\", \"deviceID\": \"" + deviceId + "\"}"
+        
+        return jsonObject
+    }
+    
+    class func getDate() -> String
+    {
+        let todayDate = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitDay | .CalendarUnitMonth | .CalendarUnitYear, fromDate: todayDate)
+        
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+        
+        //let date = " " + month + " "
+        //date += "/" + day
+        //date += "/" + year
+        println("\(month)/\(day)/\(year)")
+        return "\(month)/\(day)/\(year)"
     }
     
     private init()
@@ -84,10 +113,14 @@ public class Model
         self.systolic = -1
         self.diastolic = -1
         self.weight = -1
-        self.drinks = -1
+        self.drinks = 7
         self.stress = -1
         self.smoker = -1
         self.cigarettes = -1
         self.exerciseTime = -1
+        //self.date = " " + dateC.weekday + " "
+        //self.date += ", " + String(dateC.day) + " "
+        //self.date += String(dateC.month) + " " + String(dateC.year)
+        self.date = Model.getDate()
     }
 }

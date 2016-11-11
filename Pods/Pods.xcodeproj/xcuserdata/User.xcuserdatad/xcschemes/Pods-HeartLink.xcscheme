@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9194376EEE4629C23C9786839DE30F3D"
+               BlueprintIdentifier = "5203F0349F566B5C54D4D3649658125A"
                BuildableName = "Pods_HeartLink.framework"
                BlueprintName = "Pods-HeartLink"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9194376EEE4629C23C9786839DE30F3D"
+            BlueprintIdentifier = "5203F0349F566B5C54D4D3649658125A"
             BuildableName = "Pods_HeartLink.framework"
             BlueprintName = "Pods-HeartLink"
             ReferencedContainer = "container:Pods.xcodeproj">

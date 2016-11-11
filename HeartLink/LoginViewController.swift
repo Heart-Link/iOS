@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 class LoginViewController: UIViewController {
     
@@ -87,6 +88,51 @@ class LoginViewController: UIViewController {
         DataManager.setJson(model.generateLoginJson())
         DataManager.getLoginWithSuccess {(resultsData) -> Void in
             let json = JSON(data: resultsData)
+            
+            let managedObjectContext =
+            (UIApplication.sharedApplication().delegate
+                as! AppDelegate).managedObjectContext
+            
+            let entityDescription =
+            NSEntityDescription.entityForName("Patient",
+                inManagedObjectContext: managedObjectContext!)
+            
+            var error: NSError?
+            
+            let patientData = Patient(entity: entityDescription!,
+                insertIntoManagedObjectContext: managedObjectContext)
+            
+            if let networkID = json["networkid"].string
+            {
+                patientData.networkID = networkID
+                println("patientID stored successfully in core data")
+            }
+            
+            if let convoID = json["convoid"].string
+            {
+                patientData.convoID = convoID
+                println("convoID stored successfully in core data")
+            }
+            
+            if let gameification = json["gameification"].string
+            {
+                patientData.gameification = gameification
+                println("gameification stored successfully in core data")
+            }
+            
+            if let emrID = json["emrid"].string
+            {
+                patientData.emrID = emrID
+                println("emrID stored successfully in core data")
+            }
+            
+            if let tokenID = json["token"].string
+            {
+                patientData.tokenID = tokenID
+                println("tokenID stored successfully in core data")
+            }
+            
+            managedObjectContext?.save(&error)
         }
         
         authorizeHealthKit()

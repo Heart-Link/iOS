@@ -1,14 +1,20 @@
 //
-//  DataEntryViewController.swift
+//  HealthHistoryViewController.swift
 //  HeartLink
 //
 //  Created by User on 21/08/2016.
 //  Copyright (c) 2016 Max. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import CoreData
 
-class HealthHistoryViewController: UITableViewController {
+class HealthHistory: UITableViewController {
+    
+    let managedObjectContext =
+    (UIApplication.sharedApplication().delegate
+        as! AppDelegate).managedObjectContext
     
     var model = Model.sharedInstance
     var filteredDates = [String]()
@@ -26,7 +32,7 @@ class HealthHistoryViewController: UITableViewController {
         
         navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+        //UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
@@ -38,18 +44,26 @@ class HealthHistoryViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //distinguishes between the search results and the full list
+    //returns the number of days
     override func tableView(tableView: UITableView, numberOfRowsInSection: Int) -> Int
     {
-        if (tableView == self.searchDisplayController!.searchResultsTableView)
-        {
-            return self.filteredDates.count
-        }
+            let entityDescription =
+            NSEntityDescription.entityForName("Patient",
+                inManagedObjectContext: managedObjectContext!)
             
-        else
-        {
-            return model.dates.count
-        }
+            let request = NSFetchRequest()
+            request.entity = entityDescription
+            
+            var error: NSError?
+            
+            var objects = managedObjectContext?.executeFetchRequest(request,
+                error: &error)
+            
+            if let results = objects
+            {
+                return results.count
+            }
+            return 1
     }
     
     //fills the cells with the name of the city and returns the cell
@@ -57,19 +71,48 @@ class HealthHistoryViewController: UITableViewController {
     {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
         
-        var date: String
+        var alcohol: String!
+        var diastolic: String!
+        var systolic: String!
+        var date: String!
+        var heartRate: String!
+        var smoke: String!
+        var steps: String!
+        var stress: String!
+        var weight: String!
         
-        if (tableView == self.searchDisplayController!.searchResultsTableView)
-        {
-            date = filteredDates[indexPath.row]
-        }
+        let entityDescription =
+        NSEntityDescription.entityForName("Patient",
+            inManagedObjectContext: managedObjectContext!)
+        
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        var error: NSError?
+        
+        var objects = managedObjectContext?.executeFetchRequest(request,
+            error: &error)
+        
+        if let results = objects {
+            if results.count > 0 {
+                let match = results[indexPath.row] as! NSManagedObject
+                
+                println(String(results.count))
+                alcohol = match.valueForKey("alcohol") as! String
+                diastolic = match.valueForKey("diastolic") as! String
+                date = match.valueForKey("date") as! String
+                heartRate = match.valueForKey("heartRate") as! String
+                smoke = match.valueForKey("smoke") as! String
+                steps = match.valueForKey("steps") as! String
+                stress = match.valueForKey("stress") as! String
+                weight = match.valueForKey("weight") as! String
+                systolic = match.valueForKey("systolic") as! String
+            }
             
-        else
-        {
-            date = model.dates[indexPath.row]
+            //numRows = results.count
         }
-        
-        cell.textLabel!.text = date
+        //println(date)
+        cell.textLabel!.text = "HI"
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
@@ -77,22 +120,7 @@ class HealthHistoryViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
-        if (segue.identifier == "DateDetails")
-        {
-            //if the search results are being displayed rather than the full list, use the selected search result
-            if (self.searchDisplayController!.active)
-            {
-                let myIndexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()
-                
-                let destinationTitle = self.filteredDates[myIndexPath!.row]
-                
-                var detailViewController = segue.destinationViewController as! HistoryDetailViewController
-                detailViewController.passedDate = destinationTitle
-            }
-                
-                //otherwise, use the full list of dates
-            else
-            {
+        
                 let detailViewController = segue.destinationViewController
                     as! HistoryDetailViewController
                 
@@ -101,28 +129,77 @@ class HealthHistoryViewController: UITableViewController {
                 let currentCell = self.tableView.cellForRowAtIndexPath(myIndexPath!) as UITableViewCell!
                 currentDate = currentCell.textLabel!.text!
                 detailViewController.passedDate = currentDate
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        return 1
+    }
+    
+    /*func setDataForCell(cell:HistoryTableViewCell, indexPath:NSIndexPath) {
+        var origin: String!
+        var destination: String!
+        var departDay: String!
+        var departMonth: String!
+        var departYear: String!
+        var returnDay: String!
+        var returnMonth: String!
+        var returnYear: String!
+        var trip: String!
+        
+        let entityDescription =
+        NSEntityDescription.entityForName("Patient",
+            inManagedObjectContext: managedObjectContext!)
+        
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        var error: NSError?
+        
+        var objects = managedObjectContext?.executeFetchRequest(request,
+            error: &error)
+        
+        if let results = objects {
+            if results.count > 0 {
+                let match = results[indexPath.row] as! NSManagedObject
+                
+                origin = match.valueForKey("origin") as! String
+                destination = match.valueForKey("destination") as! String
+                departDay = match.valueForKey("departDay") as! String
+                departMonth = match.valueForKey("departMonth") as! String
+                departYear = match.valueForKey("departYear") as! String
+                returnDay = match.valueForKey("returnDay") as! String
+                returnMonth = match.valueForKey("returnMonth") as! String
+                returnYear = match.valueForKey("returnYear") as! String
+                if (origin != nil)
+                {
+                    self.slash1 = "/"
+                    self.slash2 = "/"
+                    self.slash3 = "/"
+                    self.slash4 = "/"
+                    self.arrow1 = "→"
+                    self.arrow2 = "→"
+                }
+                
+                i++
             }
+            numRows = results.count
         }
-    }
-    
-    //when using the search function, compare the string entered by the user with the ones in the cells
-    func filterContentForSearchText(searchText: String)
-    {
-        self.filteredDates = self.model.dates.filter({(date: String) -> Bool in
-            let stringMatch = date.rangeOfString(searchText)
-            return stringMatch != nil
-        })
-    }
-    
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool
-    {
-        self.filterContentForSearchText(searchString)
-        return true
-    }
-    
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool
-    {
-        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
-        return true
-    }
+        
+        cell.origin.text = origin
+        cell.dest.text = destination
+        cell.departureDay.text = departDay
+        cell.departureMonth.text = departMonth
+        cell.departureYear.text = departYear
+        cell.retDay.text = returnDay
+        cell.retMonth.text = returnMonth
+        cell.retYear.text = returnYear
+        cell.slash1.text = slash1
+        cell.slash2.text = slash2
+        cell.slash3.text = slash3
+        cell.slash4.text = slash4
+        cell.arrow1.text = arrow1
+        cell.arrow2.text = arrow2
+    }*/
 }

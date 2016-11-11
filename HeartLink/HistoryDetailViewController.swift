@@ -14,7 +14,7 @@ class HistoryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        println(passedDate + "GRR")
         // Do any additional setup after loading the view.
     }
 
