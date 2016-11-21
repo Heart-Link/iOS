@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:HeartLink/Patient.swift">
+   </FileRef>
+   <FileRef
+      location = "group:HeartLink/LoginDeets.swift">
+   </FileRef>
+   <FileRef
       location = "group:HeartLink.xcodeproj">
    </FileRef>
    <FileRef

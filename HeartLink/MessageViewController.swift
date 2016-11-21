@@ -21,6 +21,14 @@ class MessageViewController: JSQMessagesViewController {
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
     var model = Model.sharedInstance
+    var flag: Bool = true
+    var i: Int = 0
+    
+    var convoIDs = [String]()
+    var messageIDs = [String]()
+    var messagesArray = [String]()
+    var ids = [String]()
+    var times = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +41,38 @@ class MessageViewController: JSQMessagesViewController {
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
         
         self.view.backgroundColor = UIColor(red: 135/255, green: 206/255, blue: 1, alpha: 1)
+        
+        DataManager.setJson(model.generateMessageJson())
+        DataManager.getMessagesWithSuccess {(resultsData) -> Void in
+            
+            let json = JSON(data: resultsData)
+            
+            for(index, subJson):(String,JSON) in json
+            {
+                self.convoIDs.append(subJson["convoid"].string!)
+                self.messageIDs.append(subJson["messengerid"].string!)
+                self.messagesArray.append(subJson["message"].string!)
+                self.times.append(subJson["timestamp"].string!)
+            }
+            
+        }
+        
+        self.loadData()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+    }
+    
+    func loadData()
+    {
+        
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData!
@@ -89,14 +123,29 @@ class MessageViewController: JSQMessagesViewController {
     {
         super.viewDidAppear(animated)
         
+        var i: Int = 0
+        
+        for (i = 0; i < messagesArray.count; i++)
+        {
+            if (messageIDs[i] == model.emrID)
+            {
+                addMessage(senderId, text: messagesArray[i])
+            }
+            
+            else
+            {
+                addMessage(messageIDs[i], text: messagesArray[i])
+            }
+        }
+        
         // messages from someone else
-        addMessage("foo", text: "Hello patient!")
+        /*addMessage("foo", text: "Hello patient!")
         
         // messages sent from local sender
         addMessage(senderId, text: "What's good man?")
         addMessage(senderId, text: "I'm sick")
         
-        addMessage("foo", text: "Sucks for you")
+        addMessage("foo", text: "Sucks for you")*/
         
         // animates the receiving of a new message on the view
         finishReceivingMessage()
@@ -125,25 +174,60 @@ class MessageViewController: JSQMessagesViewController {
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!,
         senderDisplayName: String!, date: NSDate!) {
             
+            model.messageJson = "{\"emrid\": \"" + model.emrID + "\", \"token\": \"" + model.tokenID + "\", \"message\": \"" + text + "\"}"
             var i = 0
-            model.messageJson = "{\"request\": {\"message\" : " + text + "}}"
-            //itemRef.setValue(messageItem)
             
             JSQSystemSoundPlayer.jsq_playMessageSentSound()
             
-            DataManager.getMessageWithSuccess {(messageData) -> Void in
+            DataManager.sendMessageWithSuccess {(messageData) -> Void in
                 let json = JSON(data: messageData)
-                
-                for (i = 0; i < 1; i++)
-                {
-                    if let msg = json["message"].string
-                    {
-                        println(msg)
-                        self.msgList.append(msg)
-                    }
-                }
             }
+            
+            finishSendingMessageAnimated(true)
+            //messagesArray.append(text)
+            //self.viewDidAppear(true)
+            self.collectionView?.reloadData()
+            
+            /*var seconds = 1.0
+            var delay = seconds * Double(NSEC_PER_SEC)
+            var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(),
+                {
+                    DataManager.setJson(self.model.generateMessageJson())
+                    DataManager.getMessagesWithSuccess {(resultsData) -> Void in
+                        
+                        let json = JSON(data: resultsData)
+                        
+                        /*for(index, subJson):(String,JSON) in json
+                        {
+                        self.convoIDs.append(subJson["convoid"].string!)
+                        self.messageIDs.append(subJson["messengerid"].string!)
+                        self.messagesArray.append(subJson["message"].string!)
+                        self.times.append(subJson["timestamp"].string!)
+                        }*/
+                        
+                    }
+            
+                
+            })
+            
+            seconds = 2.0
+            delay = seconds * Double(NSEC_PER_SEC)
+            dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(),
+                {
+                    self.addMessage(senderId, text: text)
+                    self.viewDidAppear(true)
+                })*/
     }
+    
+    override func didPressAccessoryButton(sender: UIButton) {
+        
+    }
+    
+    //override
 
     /*
     // MARK: - Navigation

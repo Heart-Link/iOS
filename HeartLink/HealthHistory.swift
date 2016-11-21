@@ -18,7 +18,19 @@ class HealthHistory: UITableViewController {
     
     var model = Model.sharedInstance
     var filteredDates = [String]()
-    var currentDate: String = ""
+    
+    var currentDate: String!
+    var selectedDate: Int!
+    
+    var alcohol = [String]()
+    var diastolic = [String]()
+    var systolic = [String]()
+    var date = [String]()
+    var heartRate = [String]()
+    var smoke = [String]()
+    var steps = [String]()
+    var stress = [String]()
+    var weight = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +54,32 @@ class HealthHistory: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //sets cell colors
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if (indexPath.row % 4 == 0)
+        {
+            cell.backgroundColor = UIColor(red: 135/255, green: 206/255, blue: 1, alpha: 1)
+        }
+            
+        else if (indexPath.row % 4 == 1)
+        {
+            cell.backgroundColor = UIColor(red: 126/255, green: 192/255, blue: 238/255, alpha: 1)
+        }
+            
+        else if (indexPath.row % 4 == 2)
+        {
+            cell.backgroundColor = UIColor(red: 108/255, green: 166/255, blue: 205/255, alpha: 1)
+        }
+            
+        else if (indexPath.row % 4 == 3)
+        {
+            cell.backgroundColor = UIColor(red: 74/255, green: 112/255, blue: 139/255, alpha: 1)
+        }
+        
+        tableView.separatorStyle = .None
     }
     
     //returns the number of days
@@ -71,15 +109,15 @@ class HealthHistory: UITableViewController {
     {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
         
-        var alcohol: String!
-        var diastolic: String!
-        var systolic: String!
-        var date: String!
-        var heartRate: String!
-        var smoke: String!
-        var steps: String!
-        var stress: String!
-        var weight: String!
+        var alcoholStr: String!
+        var diastolicStr: String!
+        var systolicStr: String!
+        var dateStr: String!
+        var heartRateStr: String!
+        var smokeStr: String!
+        var stepsStr: String!
+        var stressStr: String!
+        var weightStr: String!
         
         let entityDescription =
         NSEntityDescription.entityForName("Patient",
@@ -97,25 +135,39 @@ class HealthHistory: UITableViewController {
             if results.count > 0 {
                 let match = results[indexPath.row] as! NSManagedObject
                 
-                println(String(results.count))
-                alcohol = match.valueForKey("alcohol") as! String
-                diastolic = match.valueForKey("diastolic") as! String
-                date = match.valueForKey("date") as! String
-                heartRate = match.valueForKey("heartRate") as! String
-                smoke = match.valueForKey("smoke") as! String
-                steps = match.valueForKey("steps") as! String
-                stress = match.valueForKey("stress") as! String
-                weight = match.valueForKey("weight") as! String
-                systolic = match.valueForKey("systolic") as! String
+                alcoholStr = match.valueForKey("alcohol") as! String
+                diastolicStr = match.valueForKey("diastolic") as! String
+                dateStr = match.valueForKey("date") as! String
+                heartRateStr = match.valueForKey("heartRate") as! String
+                smokeStr = match.valueForKey("smoke") as! String
+                stepsStr = match.valueForKey("steps") as! String
+                stressStr = match.valueForKey("stress") as! String
+                weightStr = match.valueForKey("weight") as! String
+                systolicStr = match.valueForKey("systolic") as! String
+                
+                alcohol.append(alcoholStr)
+                diastolic.append(diastolicStr)
+                date.append(dateStr)
+                heartRate.append(heartRateStr)
+                smoke.append(smokeStr)
+                stress.append(stressStr)
+                steps.append(stepsStr)
+                weight.append(weightStr)
+                systolic.append(systolicStr)
             }
-            
-            //numRows = results.count
         }
-        //println(date)
-        cell.textLabel!.text = "HI"
+        
+        cell.textLabel!.text = dateStr
+        cell.textLabel!.font = UIFont(name: "Avenir Next", size: 30)!
+        cell.textLabel!.textColor = UIColor.whiteColor()
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        selectedDate = indexPath.row
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
@@ -128,7 +180,17 @@ class HealthHistory: UITableViewController {
                 
                 let currentCell = self.tableView.cellForRowAtIndexPath(myIndexPath!) as UITableViewCell!
                 currentDate = currentCell.textLabel!.text!
-                detailViewController.passedDate = currentDate
+                
+                detailViewController.selection = myIndexPath!.row
+                detailViewController.passedDate = date
+                detailViewController.passedAlcohol = alcohol
+                detailViewController.passedDiastolic = diastolic
+                detailViewController.passedHeartRate = heartRate
+                detailViewController.passedSmoke = smoke
+                detailViewController.passedSteps = steps
+                detailViewController.passedStress = stress
+                detailViewController.passedWeight = weight
+                detailViewController.passedSystolic = systolic
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

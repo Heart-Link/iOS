@@ -84,6 +84,13 @@ class DataEntryViewController: UITableViewController {
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let myIndexPath = self.tableView.indexPathForSelectedRow()
@@ -108,15 +115,10 @@ class DataEntryViewController: UITableViewController {
             
         else if (indexPath.row == 3)
         {
-            self.performSegueWithIdentifier("dietView", sender: self)
-        }
-        
-        else if (indexPath.row == 4)
-        {
             self.performSegueWithIdentifier("stressView", sender: self)
         }
         
-        else if (indexPath.row == 5)
+        else if (indexPath.row == 4)
         {
             self.performSegueWithIdentifier("smokeView", sender: self)
         }

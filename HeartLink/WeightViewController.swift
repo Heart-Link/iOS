@@ -56,14 +56,11 @@ class WeightViewController: UIViewController {
         NSEntityDescription.entityForName("Patient",
             inManagedObjectContext: managedObjectContext!)
         
-        //let patientData = Patient(entity: entityDescription!,
-            //insertIntoManagedObjectContext: managedObjectContext)
+        let patientData = Patient(entity: entityDescription!,
+            insertIntoManagedObjectContext: managedObjectContext)
         
-        let patientData = NSEntityDescription.insertNewObjectForEntityForName("Patient", inManagedObjectContext: self.managedObjectContext!) as! Patient
-        
-        model.drinks = 33
         println(String(model.drinks))
-        patientData.setValue(String(model.drinks), forKey: "alcohol")
+        patientData.alcohol = String(model.drinks)
         patientData.diastolic = String(model.diastolic)
         patientData.date = model.date
         println(patientData.date)
@@ -75,6 +72,7 @@ class WeightViewController: UIViewController {
         patientData.systolic = String(model.systolic)
         
         var error: NSError?
+        
         managedObjectContext?.save(&error)
         
         if let err = error {
@@ -84,30 +82,6 @@ class WeightViewController: UIViewController {
             //address.text = ""
             //phone.text = ""
         }
-        
-        /*let request = NSFetchRequest()
-        request.entity = entityDescription
-        
-        var objects = managedObjectContext?.executeFetchRequest(request,
-            error: &error)
-        
-        if let results = objects {
-            if results.count > 0 {
-                let match = results[0] as! NSManagedObject
-                
-                alcohol = match.valueForKey("alcohol") as! String
-                diastolic = match.valueForKey("diastolic") as! String
-                date = match.valueForKey("date") as! String
-                heartRate = match.valueForKey("heartRate") as! String
-                smoke = match.valueForKey("smoke") as! String
-                steps = match.valueForKey("steps") as! String
-                stress = match.valueForKey("stress") as! String
-                weight = match.valueForKey("weight") as! String
-                systolic = match.valueForKey("systolic") as! String
-            }
-            
-            //numRows = results.count
-        }*/
     }
     
     func imageTapped(img: AnyObject)

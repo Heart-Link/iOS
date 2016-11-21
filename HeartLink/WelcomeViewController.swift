@@ -35,6 +35,8 @@ class WelcomeViewController: UITableViewController {
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
+        
+        self.navigationItem.hidesBackButton = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,19 +49,6 @@ class WelcomeViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection: Int) -> Int
     {
         return model.welcomeOptions.count
-    }
-    
-    //handles the segue if contact doctor is chosen
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if (selected == 3)
-        {
-            super.prepareForSegue(segue, sender: sender)
-            let navVc = segue.destinationViewController as! UINavigationController // 1
-            let chatVc = navVc.viewControllers.first as! MessageViewController // 2
-            chatVc.senderId = "" // 3
-            chatVc.senderDisplayName = "" // 4
-        }
     }
     
     //sets cell colors
@@ -103,6 +92,22 @@ class WelcomeViewController: UITableViewController {
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+        
+        if (selected == 3)
+        {
+            super.prepareForSegue(segue, sender: sender)
+            let navVc = segue.destinationViewController as! UINavigationController // 1
+            let chatVc = navVc.viewControllers.first as! MessageViewController // 2
+            chatVc.senderId = "" // 3
+            chatVc.senderDisplayName = "" // 4
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)

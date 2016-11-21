@@ -18,10 +18,21 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var spinningWheel: UIActivityIndicatorView!
+    @IBOutlet weak var invalidLabel: UILabel!
     
     var model = Model.sharedInstance
     
     let healthKitEntity: HealthKitEntity = HealthKitEntity()
+    
+    let managedObjectContext =
+    (UIApplication.sharedApplication().delegate
+        as! AppDelegate).managedObjectContext
+    
+    var networkID: String!
+    var convoID: String!
+    var tokenID: String!
+    var emrID: String!
+    var gameification: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +64,7 @@ class LoginViewController: UIViewController {
     {
         healthKitEntity.authorizeHealthKit { (authorized,  error) -> Void in
             
-            if authorized
+            if (authorized && self.model.loginFailure == false)
             {
                 self.performSegueWithIdentifier("loginSuccess", sender: self.loginButton)
                 println("HealthKit authorization received.")
@@ -71,6 +82,14 @@ class LoginViewController: UIViewController {
         }
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return navigationController?.navigationBarHidden == true
+    }
+    
+    override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
+        return UIStatusBarAnimation.Slide
+    }
+    
     //ensures the keyboard will close when the user presses anywhere on the screen outside of a text box
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
     {
@@ -85,81 +104,75 @@ class LoginViewController: UIViewController {
         model.password = passwordField.text
         model.deviceId = UIDevice.currentDevice().identifierForVendor!.UUIDString
         
+        let entityDescription =
+        NSEntityDescription.entityForName("LoginDeets",
+            inManagedObjectContext: managedObjectContext!)
+        
+        let loginData = LoginDeets(entity: entityDescription!,
+            insertIntoManagedObjectContext: managedObjectContext)
+        
         DataManager.setJson(model.generateLoginJson())
         DataManager.getLoginWithSuccess {(resultsData) -> Void in
             let json = JSON(data: resultsData)
             
-            let managedObjectContext =
-            (UIApplication.sharedApplication().delegate
-                as! AppDelegate).managedObjectContext
-            
-            let entityDescription =
-            NSEntityDescription.entityForName("Patient",
-                inManagedObjectContext: managedObjectContext!)
-            
-            var error: NSError?
-            
-            let patientData = Patient(entity: entityDescription!,
-                insertIntoManagedObjectContext: managedObjectContext)
-            
             if let networkID = json["networkid"].string
             {
-                patientData.networkID = networkID
+                self.model.networkID = networkID
+                loginData.networkID = networkID
                 println("patientID stored successfully in core data")
             }
             
             if let convoID = json["convoid"].string
             {
-                patientData.convoID = convoID
+                self.model.convoID = convoID
+                loginData.convoID = convoID
                 println("convoID stored successfully in core data")
             }
             
             if let gameification = json["gameification"].string
             {
-                patientData.gameification = gameification
+                self.model.gameification = gameification
+                loginData.gameification = gameification
                 println("gameification stored successfully in core data")
             }
             
             if let emrID = json["emrid"].string
             {
-                patientData.emrID = emrID
+                self.model.emrID = emrID
+                loginData.emrID = emrID
                 println("emrID stored successfully in core data")
             }
             
             if let tokenID = json["token"].string
             {
-                patientData.tokenID = tokenID
+                self.model.tokenID = tokenID
+                loginData.tokenID = tokenID
                 println("tokenID stored successfully in core data")
             }
-            
-            managedObjectContext?.save(&error)
         }
         
-        authorizeHealthKit()
+        var seconds = 2.0
+        var delay = seconds * Double(NSEC_PER_SEC)
+        var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        dispatch_after(dispatchTime, dispatch_get_main_queue(),
+            {
+        if (self.model.loginFailure == true)
+        {
+            self.spinningWheel.hidden = true
+            self.invalidLabel.hidden = false
+        }
+        
+        else
+        {
+            var error: NSError?
+        
+            self.managedObjectContext?.save(&error)
+        
+            self.authorizeHealthKit()
+        }
+                })
     }
-    
-    /*func saveName(name: String)
-    {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        let entity = NSEntityDescription.entityForName("Patient",
-            inManagedObjectContext:managedContext)
-        
-        let patient = NSManagedObject(entity: entity!,
-            insertIntoManagedObjectContext: managedContext)
-        
-        person.setValue(name, forKey: "name")
-        
-        do {
-        try managedContext.save()
-        
-        people.append(person)
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-    }*/
     
     /*
     // MARK: - Navigation

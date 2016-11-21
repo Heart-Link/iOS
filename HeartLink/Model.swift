@@ -14,7 +14,7 @@ public class Model
 {
     //these are the options for the first screen
     let welcomeOptions = ["Enter Health Data", "See Gamification", "See Health History", "Contact Doctor", "Logout"]
-    let entryOptions = ["Blood Pressure", "Weight", "Alcohol Intake", "Diet", "Stress", "Smoking"]
+    let entryOptions = ["Blood Pressure", "Weight", "Alcohol Intake", "Stress", "Smoking"]
     let msgSenders = ["Dr. Smith"]
     let msgSubjects = ["Check up"]
     let name = "Helga"
@@ -31,12 +31,18 @@ public class Model
     var steps: HKQuantity!
     var dates = [String]()
     var patientId: String = "7779"
+    var loginFailure: Bool = false
     
     var messageJson: String!
     var username: String!
     var password: String!
     var deviceId: String!
     var date: String
+    var networkID: String!
+    var convoID: String!
+    var gameification: String!
+    var emrID: String!
+    var tokenID: String!
     
     let dateC = NSDateComponents()
     
@@ -72,7 +78,7 @@ public class Model
             "patientID": patientId
         ]*/
         
-        let jsonObject: String = "{\"bpHigh\": \"" + String(systolic) + "\", \"bpLow\": \"" + String(diastolic) + "\", \"weight\": \"" + String(weight) + "\", \"exerciseTime\": \"" + String(exerciseTime) + "\", \"alcoholIntake\": \"" + String(drinks) + "\", \"steps\": \"" + String(stringInterpolationSegment: steps) + "\", \"averageHR\": \"" + String(stringInterpolationSegment: heartRate) + "\", \"stressLevel\": \"" + String(stress) + "\", \"smoke\": \"" + String(cigarettes) + "\", \"patientID\": \"" + String(patientId) + "\"}"
+        let jsonObject: String = "{\"bpHigh\": \"" + String(systolic) + "\", \"bpLow\": \"" + String(diastolic) + "\", \"weight\": \"" + String(weight) + "\", \"exerciseTime\": \"" + String(exerciseTime) + "\", \"alcoholIntake\": \"" + String(drinks) + "\", \"steps\": \"" + String(stringInterpolationSegment: steps) + "\", \"averageHR\": \"" + String(stringInterpolationSegment: heartRate) + "\", \"stressLevel\": \"" + String(stress) + "\", \"smoke\": \"" + String(cigarettes) + "\", \"patientID\": \"" + String(patientId) + "\", \"tokenID\": \"" + String(tokenID) + "\"}"
         
         return jsonObject
     }
@@ -89,6 +95,18 @@ public class Model
         let jsonObject: String = "{\"email\": \"" + username + "\", \"password\": \"" + password + "\", \"deviceID\": \"" + deviceId + "\"}"
         
         return jsonObject
+    }
+    
+    func generateMessageJson() -> String
+    {
+        let jsonObject: String = "{\"token\": \"" + tokenID + "\", \"emrID\": \"" + emrID + "\"}"
+        
+        return jsonObject
+    }
+    
+    func generateSendMessageJson() -> String
+    {
+        return messageJson
     }
     
     class func getDate() -> String
@@ -113,11 +131,12 @@ public class Model
         self.systolic = -1
         self.diastolic = -1
         self.weight = -1
-        self.drinks = 7
+        self.drinks = -1
         self.stress = -1
         self.smoker = -1
         self.cigarettes = -1
         self.exerciseTime = -1
+        self.gameification = "yes"
         //self.date = " " + dateC.weekday + " "
         //self.date += ", " + String(dateC.day) + " "
         //self.date += String(dateC.month) + " " + String(dateC.year)
