@@ -151,6 +151,8 @@ class LoginViewController: UIViewController {
             }
         }
         
+        
+        
         var seconds = 2.0
         var delay = seconds * Double(NSEC_PER_SEC)
         var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))

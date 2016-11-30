@@ -28,33 +28,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Welcome" id="dFF-3h-5rj"/>
                     <connections>
-                        <segue destination="QqV-Na-ZRS" kind="show" identifier="gameView" id="n8f-wM-wIi"/>
-                        <segue destination="1Z5-HB-7Ue" kind="show" identifier="dataView" id="Bze-q6-22L"/>
-                        <segue destination="jSF-gC-Ey0" kind="show" identifier="contactView" id="vKn-6R-3Ua"/>
                         <segue destination="zkF-jh-3kv" kind="show" identifier="logout" id="qnS-jy-Csu"/>
-                        <segue destination="lCJ-ek-YKT" kind="show" identifier="historyView" id="o0f-yA-rYb"/>
+                        <segue destination="QqV-Na-ZRS" kind="show" identifier="gameView" id="5bq-Hc-uKi"/>
+                        <segue destination="CVk-3u-lDE" kind="show" identifier="dataView" id="dBz-ou-z42"/>
+                        <segue destination="Pi0-gR-4z9" kind="show" identifier="historyView" id="5fL-Wc-U8u"/>
+                        <segue destination="pNE-lm-z3V" kind="show" identifier="contactView" id="3Pj-HY-Okd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rk2-bp-whL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-116" y="-302"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gjt-Vs-EJZ">
-            <objects>
-                <navigationController id="jSF-gC-Ey0" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="WV4-JO-vT4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s2g-lc-yRS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="pNE-lm-z3V" kind="relationship" relationship="rootViewController" id="XOx-1d-dtl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Nt-AC-0AH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1112" y="593"/>
+            <point key="canvasLocation" x="-82" y="-307"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="PIP-Ma-ydV">
@@ -110,23 +93,6 @@
             </objects>
             <point key="canvasLocation" x="1361" y="-993"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="g4S-Wf-q8k">
-            <objects>
-                <navigationController id="1Z5-HB-7Ue" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="6am-XC-SxH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ze7-Hn-aEu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="CVk-3u-lDE" kind="relationship" relationship="rootViewController" id="Kup-hQ-w4Z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yix-Ep-XNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="634" y="-993"/>
-        </scene>
         <!--Game View Controller-->
         <scene sceneID="Bzr-8Q-qqa">
             <objects>
@@ -153,162 +119,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojx-6N-Uar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="634" y="-302"/>
-        </scene>
-        <!--Inbox-->
-        <scene sceneID="Ga3-yw-EUH">
-            <objects>
-                <tableViewController title="Inbox" id="UWG-1Q-glp" customClass="InboxViewController" customModule="HeartLink" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" id="6kJ-Qj-xqo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="92" id="Yi5-F2-5UT" customClass="InboxTableViewCell" customModule="HeartLink" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yi5-F2-5UT" id="SGC-4y-thg">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If2-sK-IDO">
-                                            <rect key="frame" x="15" y="44" width="569" height="28"/>
-                                            <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="25"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-wp-xRT">
-                                            <rect key="frame" x="15" y="8" width="569" height="28"/>
-                                            <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="25"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="senderLabel" destination="EQc-wp-xRT" id="Hey-bg-t9L"/>
-                                    <outlet property="subjectLabel" destination="If2-sK-IDO" id="bKm-Wz-QMj"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="UWG-1Q-glp" id="137-Gt-jGF"/>
-                            <outlet property="delegate" destination="UWG-1Q-glp" id="MhD-aV-Kn9"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="➕New" id="q2w-oq-mWY">
-                            <color key="tintColor" red="0.058843194180000002" green="0.1124458902" blue="0.42678740529999998" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="dQ3-HU-Zau" kind="show" id="eUj-8t-3jh"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Inbox" id="npv-5j-Gm5">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="enO-Wi-8cy"/>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v0w-ES-qSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2043" y="383"/>
-        </scene>
-        <!--Message View Controller-->
-        <scene sceneID="zxy-hu-xoo">
-            <objects>
-                <viewController id="nF8-rq-RrS" customClass="MessageViewController" customModule="HeartLink" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LbP-JE-Wux"/>
-                        <viewControllerLayoutGuide type="bottom" id="kcI-h4-Qim"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="s2N-2l-dnW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor's Name Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8t-Dl-0iA">
-                                <rect key="frame" x="16" y="85" width="275" height="29"/>
-                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssX-Z3-Hde">
-                                <rect key="frame" x="216" y="477" width="168" height="40"/>
-                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="23"/>
-                                <state key="normal" title="Send">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDL-Vb-Vrr">
-                                <rect key="frame" x="16" y="146" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="ssX-Z3-Hde" secondAttribute="centerX" id="WEY-cP-PR9"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="lab" destination="hDL-Vb-Vrr" id="JkE-75-Nyi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0v4-zK-EWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3446" y="383"/>
-        </scene>
-        <!--Sent-->
-        <scene sceneID="1vh-z1-TCo">
-            <objects>
-                <tableViewController id="NhP-xR-mBp" customClass="SentViewController" customModule="HeartLink" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" id="2sE-VA-esy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="56" id="9sX-KA-L8W" customClass="SentTableViewCell" customModule="HeartLink" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9sX-KA-L8W" id="o3Q-9o-3dC">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-mG-PJf">
-                                            <rect key="frame" x="16" y="8" width="569" height="28"/>
-                                            <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="25"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="subjectLabel" destination="wAt-mG-PJf" id="Gnu-L6-IDy"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="NhP-xR-mBp" id="0PK-uE-eTQ"/>
-                            <outlet property="delegate" destination="NhP-xR-mBp" id="I7Q-th-Zg7"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Sent" id="bIp-7Q-46G"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXW-M9-B83" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2043" y="1074"/>
-        </scene>
-        <!--Sent-->
-        <scene sceneID="JIC-l7-YuK">
-            <objects>
-                <navigationController id="L60-xb-oH7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sent" id="TbN-7l-A2D"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nKu-vA-9mp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="NhP-xR-mBp" kind="relationship" relationship="rootViewController" id="OF3-ft-sTf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ebJ-Y3-f31" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1339" y="1074"/>
         </scene>
         <!--History Detail View Controller-->
         <scene sceneID="n5z-RW-Mk0">
@@ -464,24 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5z0-MJ-rjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="1724"/>
-        </scene>
-        <!--Inbox-->
-        <scene sceneID="D7q-Tj-tF7">
-            <objects>
-                <navigationController id="Msh-xE-jCn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inbox" id="FSH-2g-owr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="caE-aL-jaM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="UWG-1Q-glp" kind="relationship" relationship="rootViewController" id="fsK-sO-DHb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o7I-N1-eqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1339" y="383"/>
+            <point key="canvasLocation" x="1326" y="448"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fBt-CP-zC6">
@@ -598,55 +391,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Lw-zY-cjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-890" y="-302"/>
-        </scene>
-        <!--Doctor Contact-->
-        <scene sceneID="PeB-TU-glc">
-            <objects>
-                <viewController title="Doctor Contact" id="dQ3-HU-Zau" customClass="DoctorContactViewController" customModule="HeartLink" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hig-M9-7vx"/>
-                        <viewControllerLayoutGuide type="bottom" id="GWm-Z8-qKA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mrw-I7-fsQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHV-yx-2rZ">
-                                <rect key="frame" x="223" y="501" width="148" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="BEZ-8u-B2O"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="34"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="nF8-rq-RrS" kind="show" id="dgp-92-Eoj"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="If you have any of the following symptoms, contact the doctor immedately" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hy-2g-aVC">
-                                <rect key="frame" x="16" y="78" width="331" height="224"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="331" id="8Ur-vC-zK4"/>
-                                    <constraint firstAttribute="height" constant="224" id="Ipl-ct-Tfc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="34"/>
-                                <color key="textColor" red="1" green="0.97253954249999996" blue="0.99313488559999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.058843194183787723" green="0.11244589015636713" blue="0.42678740530303028" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="QHV-yx-2rZ" secondAttribute="centerX" id="GL6-QR-3g5"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="warning" destination="6hy-2g-aVC" id="sF3-T5-4NK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fXv-V3-ZX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2739" y="383"/>
         </scene>
         <!--Blood Pressure View Controller-->
         <scene sceneID="iLj-J9-9Rc">
@@ -1239,25 +983,6 @@
             </objects>
             <point key="canvasLocation" x="2813" y="-1641"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="re5-dI-fJZ">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="J2p-4F-xQl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="POS-et-lI8">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Msh-xE-jCn" kind="relationship" relationship="viewControllers" id="boG-xZ-fO8"/>
-                        <segue destination="L60-xb-oH7" kind="relationship" relationship="viewControllers" id="3Qm-ct-kdR"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k0Q-J3-7hC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="634" y="383"/>
-        </scene>
         <!--History-->
         <scene sceneID="1xv-lN-dev">
             <objects>
@@ -1297,24 +1022,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="613" y="1381"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6cN-bo-ual">
-            <objects>
-                <navigationController id="lCJ-ek-YKT" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="GwM-27-R1E"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Df-r3-6Za">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Pi0-gR-4z9" kind="relationship" relationship="rootViewController" id="pCV-Tx-jVz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zgx-4G-Y6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-90" y="1381"/>
+            <point key="canvasLocation" x="561" y="441"/>
         </scene>
     </scenes>
     <resources>

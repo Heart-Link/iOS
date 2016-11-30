@@ -138,16 +138,6 @@ class MessageViewController: JSQMessagesViewController {
             }
         }
         
-        // messages from someone else
-        /*addMessage("foo", text: "Hello patient!")
-        
-        // messages sent from local sender
-        addMessage(senderId, text: "What's good man?")
-        addMessage(senderId, text: "I'm sick")
-        
-        addMessage("foo", text: "Sucks for you")*/
-        
-        // animates the receiving of a new message on the view
         finishReceivingMessage()
     }
     
@@ -183,44 +173,8 @@ class MessageViewController: JSQMessagesViewController {
                 let json = JSON(data: messageData)
             }
             
+            self.addMessage(senderId, text: text)
             finishSendingMessageAnimated(true)
-            //messagesArray.append(text)
-            //self.viewDidAppear(true)
-            self.collectionView?.reloadData()
-            
-            /*var seconds = 1.0
-            var delay = seconds * Double(NSEC_PER_SEC)
-            var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-            
-            dispatch_after(dispatchTime, dispatch_get_main_queue(),
-                {
-                    DataManager.setJson(self.model.generateMessageJson())
-                    DataManager.getMessagesWithSuccess {(resultsData) -> Void in
-                        
-                        let json = JSON(data: resultsData)
-                        
-                        /*for(index, subJson):(String,JSON) in json
-                        {
-                        self.convoIDs.append(subJson["convoid"].string!)
-                        self.messageIDs.append(subJson["messengerid"].string!)
-                        self.messagesArray.append(subJson["message"].string!)
-                        self.times.append(subJson["timestamp"].string!)
-                        }*/
-                        
-                    }
-            
-                
-            })
-            
-            seconds = 2.0
-            delay = seconds * Double(NSEC_PER_SEC)
-            dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-            
-            dispatch_after(dispatchTime, dispatch_get_main_queue(),
-                {
-                    self.addMessage(senderId, text: text)
-                    self.viewDidAppear(true)
-                })*/
     }
     
     override func didPressAccessoryButton(sender: UIButton) {

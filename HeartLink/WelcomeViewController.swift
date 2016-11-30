@@ -103,10 +103,11 @@ class WelcomeViewController: UITableViewController {
         if (selected == 3)
         {
             super.prepareForSegue(segue, sender: sender)
-            let navVc = segue.destinationViewController as! UINavigationController // 1
-            let chatVc = navVc.viewControllers.first as! MessageViewController // 2
-            chatVc.senderId = "" // 3
-            chatVc.senderDisplayName = "" // 4
+            //let navVc = segue.destinationViewController as! UINavigationController
+            //let chatVc = segue.destinationViewController.viewControllers.first as! MessageViewController
+            let chatVc = segue.destinationViewController as! MessageViewController
+            chatVc.senderId = ""
+            chatVc.senderDisplayName = ""
         }
     }
     
