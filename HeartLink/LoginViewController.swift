@@ -102,7 +102,9 @@ class LoginViewController: UIViewController {
         self.spinningWheel.hidden = false
         model.username = usernameField.text
         model.password = passwordField.text
-        model.deviceId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        //model.deviceId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        model.deviceId = delegate.tokenId
         
         let entityDescription =
         NSEntityDescription.entityForName("LoginDeets",

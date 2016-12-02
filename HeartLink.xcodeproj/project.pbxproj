@@ -37,6 +37,7 @@
 		CE5E88A11DB2AE21005548ED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E88A01DB2AE21005548ED /* LoginViewController.swift */; };
 		CE6D47F21DA3FAAF000CBF20 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6D47F11DA3FAAF000CBF20 /* HealthKit.framework */; };
 		CE77B89E1DAD21A200545F82 /* HealthKitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77B89D1DAD21A200545F82 /* HealthKitEntity.swift */; };
+		CE82124B1DEF54F300665454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */; };
 		CEA1DF2B1D21919D0040A32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2A1D21919D0040A32B /* AppDelegate.swift */; };
 		CEA1DF2E1D21919D0040A32B /* HeartLink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2C1D21919D0040A32B /* HeartLink.xcdatamodeld */; };
 		CEA1DF301D21919D0040A32B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1DF2F1D21919D0040A32B /* WelcomeViewController.swift */; };
@@ -540,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE82124B1DEF54F300665454 /* AppDelegate.swift in Sources */,
 				CEA1DF441D21919D0040A32B /* HeartLinkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,11 +668,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F7DB97C3F0345D4F9727BB6A /* Pods-HeartLink.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = HeartLink/HeartLink.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeartLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -681,11 +684,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C4966F0C21ACD453B9DF83E /* Pods-HeartLink.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = HeartLink/HeartLink.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeartLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -124,7 +124,7 @@ class MessageViewController: JSQMessagesViewController {
         super.viewDidAppear(animated)
         
         var i: Int = 0
-        
+        addMessage(senderId, text: model.patientId)
         for (i = 0; i < messagesArray.count; i++)
         {
             if (messageIDs[i] == model.emrID)
